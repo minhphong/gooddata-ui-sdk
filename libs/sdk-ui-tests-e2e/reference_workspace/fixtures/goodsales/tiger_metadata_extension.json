@@ -4,6 +4,731 @@
         "analyticalDashboards": [
             {
                 "content": {
+                    "filterContextRef": {
+                        "identifier": {
+                            "id": "43e9bfac-ad86-4a1a-9c1f-0c9ba1de3a27",
+                            "type": "filterContext"
+                        }
+                    },
+                    "layout": {
+                        "sections": [
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "77f69714-f57b-4d61-90f2-423a3f1c3700",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "table has row column measure",
+                                            "type": "insight"
+                                        }
+                                    },
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 5
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "73a0369b-ca73-4fba-8378-bf79eef74322",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "table only row and column",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            },
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "51067ec5-0a24-474d-9db7-177947c03721",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "table only rows and measures",
+                                            "type": "insight"
+                                        }
+                                    },
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_activity_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "e93e85ce-b29a-4158-9fdc-19a2b4655962",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "table only rows",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            },
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 12
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "configuration": {
+                                                "hideTitle": false
+                                            },
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "b7a3e512-9dcc-4d76-a76d-37a6837684a5",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "table has only measure and columns",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            },
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 12
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "configuration": {
+                                                "hideTitle": false
+                                            },
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "4dae24d9-8219-41aa-8e4f-1e827eb6b841",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "table transpose row left",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            },
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 12
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "4dae24d9-8219-41aa-8e4f-1e827eb6b841",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "table transpose row left",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            }
+                        ],
+                        "type": "IDashboardLayout"
+                    },
+                    "version": "2"
+                },
+                "description": "",
+                "id": "13aa9700-1701-4152-9eaf-5665d27c9760",
+                "title": "Dashboard table drill down"
+            },
+            {
+                "content": {
+                    "filterContextRef": {
+                        "identifier": {
+                            "id": "be65adf1-3394-418c-ad98-67abf92a46e7",
+                            "type": "filterContext"
+                        }
+                    },
+                    "layout": {
+                        "sections": [
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "configuration": {
+                                                "hideTitle": false
+                                            },
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_activity_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "e11a6dfd-32a7-4d6e-acbd-346099e32eb8",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "Chart Activity by Department",
+                                            "type": "insight"
+                                        }
+                                    },
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 12
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "configuration": {
+                                                "hideTitle": false
+                                            },
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_activity_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "d534b820-56f9-48c9-8f49-160968a062a9",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "Table Activity by Year and Department",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            }
+                        ],
+                        "type": "IDashboardLayout"
+                    },
+                    "version": "2"
+                },
+                "description": "",
+                "id": "3d946064-8b9e-4662-9fb1-e61bb1d90872",
+                "title": "Target board"
+            },
+            {
+                "content": {
+                    "filterContextRef": {
+                        "identifier": {
+                            "id": "34af0d44-c942-4ef7-9bb1-1ed89b2c4e20",
+                            "type": "filterContext"
+                        }
+                    },
+                    "layout": {
+                        "sections": [
+                            {
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 12
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "configuration": {
+                                                "hideTitle": false
+                                            },
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "739a5b35-a67f-4f64-b72b-7bf4983b762c",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "Table with years",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            },
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "a69dd37d-0f7a-4848-852d-a6233a66fc32",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "Column chart with years",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            }
+                        ],
+                        "type": "IDashboardLayout"
+                    },
+                    "version": "2"
+                },
+                "description": "",
+                "id": "54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2",
+                "title": "Implicit drill"
+            },
+            {
+                "content": {
+                    "filterContextRef": {
+                        "identifier": {
+                            "id": "2663809c-67de-4dd6-a6d6-445bd44460b8",
+                            "type": "filterContext"
+                        }
+                    },
+                    "layout": {
+                        "sections": [
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "configuration": {
+                                                "hideTitle": false
+                                            },
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "a69dd37d-0f7a-4848-852d-a6233a66fc32",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "Column chart with years",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            }
+                        ],
+                        "type": "IDashboardLayout"
+                    },
+                    "version": "2"
+                },
+                "createdAt": "2023-11-20 04:46",
+                "createdBy": {
+                    "id": "qa.tiger1",
+                    "type": "user"
+                },
+                "description": "",
+                "id": "e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc",
+                "title": "Insight chart with years"
+            },
+            {
+                "content": {
+                    "filterContextRef": {
+                        "identifier": {
+                            "id": "649fd625-57a0-4c92-b197-3914ec980cce",
+                            "type": "filterContext"
+                        }
+                    },
+                    "layout": {
+                        "sections": [
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "1b2a3b52-2209-4b78-8d98-def92a93cffa",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "heat map only row measure",
+                                            "type": "insight"
+                                        }
+                                    },
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "fdcb381c-a979-4c63-9588-828cafa4227a",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "heat map has measure column row",
+                                            "type": "insight"
+                                        }
+                                    },
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "fdcb381c-a979-4c63-9588-828cafa4227a",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "properties": {},
+                                            "title": "heat map has measure column row",
+                                            "type": "insight"
+                                        }
+                                    },
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 6
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "05828384-8719-4c2e-8270-7a66ef88ddf3",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "heat map only measures",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            }
+                        ],
+                        "type": "IDashboardLayout"
+                    },
+                    "version": "2"
+                },
+                "createdAt": "2023-11-20 08:00",
+                "createdBy": {
+                    "id": "qa.tiger1",
+                    "type": "user"
+                },
+                "description": "",
+                "id": "f99c4d22-c996-41d9-85ff-7cbf7188583b",
+                "title": "Heat map chart with stack data"
+            },
+            {
+                "content": {
+                    "filterContextRef": {
+                        "identifier": {
+                            "id": "5c546380-41cb-4057-b149-ab312336b701",
+                            "type": "filterContext"
+                        }
+                    },
+                    "layout": {
+                        "sections": [
+                            {
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 11
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "c06958a4-6fe7-43dd-af1d-5d373b2a32a9",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "Column with two drillable attributes",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            },
+                            {
+                                "header": {},
+                                "items": [
+                                    {
+                                        "size": {
+                                            "xl": {
+                                                "gridHeight": 22,
+                                                "gridWidth": 12
+                                            }
+                                        },
+                                        "type": "IDashboardLayoutItem",
+                                        "widget": {
+                                            "dateDataSet": {
+                                                "identifier": {
+                                                    "id": "dt_closedate_timestamp",
+                                                    "type": "dataset"
+                                                }
+                                            },
+                                            "description": "",
+                                            "drills": [],
+                                            "ignoreDashboardFilters": [],
+                                            "insight": {
+                                                "identifier": {
+                                                    "id": "563e58ef-e2be-4b17-99c0-82bf8beed212",
+                                                    "type": "visualizationObject"
+                                                }
+                                            },
+                                            "title": "bullet with two attribute same bucket",
+                                            "type": "insight"
+                                        }
+                                    }
+                                ],
+                                "type": "IDashboardLayoutSection"
+                            }
+                        ],
+                        "type": "IDashboardLayout"
+                    },
+                    "version": "2"
+                },
+                "description": "",
+                "id": "ffaf68da-6fc6-4ea9-afca-b3edb0d54cd6",
+                "title": "Dashboard drilldown on chart"
+            },
+            {
+                "content": {
                     "dateFilterConfig": {
                         "filterName": "Date range",
                         "mode": "readonly"
@@ -5957,6 +6682,78 @@
                         {
                             "items": [
                                 {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "aggregation": "sum",
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "f_opportunitysnapshot.f_amount",
+                                                        "type": "fact"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "format": "#,##0.00",
+                                        "localIdentifier": "e6433322d4474f08b92785fc56891193",
+                                        "title": "Sum of Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "1e0c4d79a39847c083344059e4f11794"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "columns"
+                        }
+                    ],
+                    "filters": [
+                        {
+                            "relativeDateFilter": {
+                                "dataSet": {
+                                    "identifier": {
+                                        "id": "dt_closedate_timestamp",
+                                        "type": "dataset"
+                                    }
+                                },
+                                "granularity": "GDC.time.year"
+                            }
+                        }
+                    ],
+                    "properties": {
+                        "controls": {
+                            "columnHeadersPosition": "left",
+                            "columnWidths": [],
+                            "measureGroupDimension": "rows"
+                        }
+                    },
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "description": "",
+                "id": "4dae24d9-8219-41aa-8e4f-1e827eb6b841",
+                "title": "table transpose row left"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
                                     "attribute": {
                                         "displayForm": {
                                             "identifier": {
@@ -5965,8 +6762,28 @@
                                             }
                                         },
                                         "localIdentifier": "ca076ec85db5497a8846b9809760fb93"
+                                    },
+                                "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "7bcd5b2936c44d929a540d6ae660db44",
+                                        "title": "Amount"
                                     }
-                                },
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
                                 {
                                     "attribute": {
                                         "displayForm": {
@@ -5987,6 +6804,11 @@
                                             }
                                         },
                                         "localIdentifier": "37594b463016459f873d106dd29d111d"
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "52c738c4577a49638eadd51b58abf972"
                                     }
                                 }
                             ],
@@ -6006,14 +6828,890 @@
                     "version": "2",
                     "visualizationUrl": "local:table"
                 },
-                "createdAt": "2023-11-14 15:29",
+                "description": "",
+                "id": "51067ec5-0a24-474d-9db7-177947c03721",
+                "title": "table only rows and measures"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "2cc8363a6cfe49608ba66e41d46ed64f",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "973a14c4-acb1-45fb-ba52-5d96fa02f7ba",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "ecde14b8340d477f8035af2016c51a10",
+                                        "title": "Win Rate"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "secondary_measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "e519fa2a-86c3-4e32-8313-0c03062348j3",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "4168c1457ac44b3c97021b81226f590d",
+                                        "title": "Won"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "tertiary_measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "99c287344abe4b26b752b8b69df68623"
+                                    }
+                                },
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "label.f_product.product.name",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "8c59867684424d85aa249506ca24180c"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:bullet"
+                },
+                "description": "",
+                "id": "563e58ef-e2be-4b17-99c0-82bf8beed212",
+                "title": "bullet with two attribute same bucket"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "aggregation": "avg",
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "f_opportunitysnapshot.f_amount",
+                                                        "type": "fact"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "format": "#,##0.00",
+                                        "localIdentifier": "79aff233199d489f93c4d16256e8ac1a",
+                                        "title": "Avg Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "973a14c4-acb1-45fb-ba52-5d96fa02f7ba",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "92b982bdd2824afcbdf9c88b492f252d",
+                                        "title": "Win Rate"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "secondary_measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "80b8d845ebc34a8bab113045cfaa3d6c",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "tertiary_measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "dt_closedate_timestamp.year",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "6c509dabbd6f4f3f9294f97df02e84b8"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        }
+                    ],
+                    "filters": [
+                        {
+                            "relativeDateFilter": {
+                                "dataSet": {
+                                    "identifier": {
+                                        "id": "dt_closedate_timestamp",
+                                        "type": "dataset"
+                                    }
+                                },
+                                "granularity": "GDC.time.year"
+                            }
+                        }
+                    ],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:bubble"
+                },
+                "description": "",
+                "id": "5985d72e-4fc2-41d7-934a-17ee1beeee27",
+                "title": "Bubble chart by year"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "computeRatio": false,
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "e519fa2a-86c3-4e32-8313-0c03062348j3",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "ca4c77f6a3374ceea1af126aaff50641",
+                                        "title": "Won"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "dt_closedate_timestamp.year",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "79a270046bc8429da639046e31cb7c37"
+                                    }
+                                },
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "f62507ceaa8b4501914d0160c0c3897f"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "attribute"
+                        }
+                    ],
+                    "filters": [
+                        {
+                            "relativeDateFilter": {
+                                "dataSet": {
+                                    "identifier": {
+                                        "id": "dt_closedate_timestamp",
+                                        "type": "dataset"
+                                    }
+                                },
+                                "granularity": "GDC.time.year"
+                            }
+                        }
+                    ],
+                    "properties": {},
+                    "sorts": [
+                        {
+                            "attributeSortItem": {
+                                "attributeIdentifier": "79a270046bc8429da639046e31cb7c37",
+                                "direction": "asc"
+                            }
+                        }
+                    ],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "description": "",
+                "id": "739a5b35-a67f-4f64-b72b-7bf4983b762c",
+                "modifiedAt": "2023-11-20 04:54",
+                "modifiedBy": {
+                    "id": "qa.tiger1",
+                    "type": "user"
+                },
+                "title": "Table with years"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "52c738c4577a49638eadd51b58abf972"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "attribute"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_stage.isactive_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "a0ca808f43224d16a2f7c361cd9e2124"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "columns"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [
+                        {
+                            "attributeSortItem": {
+                                "attributeIdentifier": "52c738c4577a49638eadd51b58abf972",
+                                "direction": "asc"
+                            }
+                        }
+                    ],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "description": "",
+                "id": "73a0369b-ca73-4fba-8378-bf79eef74322",
+                "title": "table only row and column"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "e519fa2a-86c3-4e32-8313-0c03062348j3",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "9ca44263a0214220b377e9fb866a9099",
+                                        "title": "Won"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "dt_closedate_timestamp.year",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "9b841fa09db94246bd00780736c45890"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "1487ea4461314675bce1b94500f97ac6"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "stack"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {
+                        "controls": {
+                            "stackMeasuresToPercent": true
+                        }
+                    },
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:column"
+                },
+                "description": "",
+                "id": "a69dd37d-0f7a-4848-852d-a6233a66fc32",
+                "title": "Column chart with years"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "c05b186327954a55aa5f1a5cd48d2cfa",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "43cde8be607b486cb53b19d9515cb9e1"
+                                    }
+                                },
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "dt_closedate_timestamp.year",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "af98513a332444a6b49413b3f85274a6"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "columns"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "description": "",
+                "id": "b7a3e512-9dcc-4d76-a76d-37a6837684a5",
+                "title": "table has only measure and columns"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "aggregation": "sum",
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "fact.f_activity.activitydate",
+                                                        "type": "fact"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "format": "#,##0.00",
+                                        "localIdentifier": "078e02880e56428b8f1ee43ff426f1ec",
+                                        "title": "Sum of Activity (Date)"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "dt_activity_timestamp.year",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "cc16c0e3cd4341b599fee87fe139d322"
+                                    }
+                                },
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "37af680c90fc450bb70f42c7d09f0d57"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "attribute"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [
+                        {
+                            "attributeSortItem": {
+                                "attributeIdentifier": "cc16c0e3cd4341b599fee87fe139d322",
+                                "direction": "asc"
+                            }
+                        }
+                    ],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "description": "",
+                "id": "d534b820-56f9-48c9-8f49-160968a062a9",
+                "title": "Table Activity by Year and Department"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "aggregation": "sum",
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "fact.f_activity.activitydate",
+                                                        "type": "fact"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "format": "#,##0.00",
+                                        "localIdentifier": "941c21b05ff64c859cfaf1940fe8e0a9",
+                                        "title": "Sum of Activity (Date)"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "4c6d7dc69ec44199bd5eadd74f33d093"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:column"
+                },
+                "description": "",
+                "id": "e11a6dfd-32a7-4d6e-acbd-346099e32eb8",
+                "title": "Chart Activity by Department"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "52c738c4577a49638eadd51b58abf972"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "attribute"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [
+                        {
+                            "attributeSortItem": {
+                                "attributeIdentifier": "52c738c4577a49638eadd51b58abf972",
+                                "direction": "asc"
+                            }
+                        }
+                    ],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "createdAt": "2023-11-20 00:09",
                 "createdBy": {
-                    "id": "admin",
+                    "id": "qa.tiger1",
                     "type": "user"
                 },
                 "description": "",
-                "id": "780f3759-65cc-4489-858d-9c318ecece75",
-                "title": "USA geography attribute table"
+                "id": "e93e85ce-b29a-4158-9fdc-19a2b4655962",
+                "title": "table only rows"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "0cb64657cb554463848d1cd6e8b2bcc6",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "52c738c4577a49638eadd51b58abf972"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "label.f_product.product.name",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "5b36994654c844e69bd97b71535b8cfa"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "stack"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:heatmap"
+                },
+                "description": "",
+                "id": "fdcb381c-a979-4c63-9588-828cafa4227a",
+                "title": "heat map has measure column row"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "0cb64657cb554463848d1cd6e8b2bcc6",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        }
+                    ],
+                    "filters": [
+                        {
+                            "relativeDateFilter": {
+                                "dataSet": {
+                                    "identifier": {
+                                        "id": "dt_closedate_timestamp",
+                                        "type": "dataset"
+                                    }
+                                },
+                                "granularity": "GDC.time.year"
+                            }
+                        }
+                    ],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:heatmap"
+                },
+                "description": "",
+                "id": "05828384-8719-4c2e-8270-7a66ef88ddf3",
+                "title": "heat map only measures"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "0cb64657cb554463848d1cd6e8b2bcc6",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "52c738c4577a49638eadd51b58abf972"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "stack"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:heatmap"
+                },
+                "description": "",
+                "id": "1259dbe9-bd76-4158-8768-8d826346661d",
+                "title": "heat map only column measure"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "0cb64657cb554463848d1cd6e8b2bcc6",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "52c738c4577a49638eadd51b58abf972"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:heatmap"
+                },
+                "description": "",
+                "id": "1b2a3b52-2209-4b78-8d98-def92a93cffa",
+                "title": "heat map only row measure"
             }
         ]
     }

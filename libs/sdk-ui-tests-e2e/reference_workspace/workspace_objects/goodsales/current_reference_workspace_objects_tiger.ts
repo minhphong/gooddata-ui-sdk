@@ -2657,6 +2657,102 @@ export const Insights = {
      * Insight Title: Table with stage name and atribute filter
      * Insight ID: fbcca86f-c473-446b-b316-eb4f4e5de909
      */ TableWithStageNameAndAtributeFilter: "fbcca86f-c473-446b-b316-eb4f4e5de909",
+    /**
+     * Insight Title: heat map only measures
+     * Insight ID: 05828384-8719-4c2e-8270-7a66ef88ddf3
+     */
+    HeatMapOnlyMeasures: "05828384-8719-4c2e-8270-7a66ef88ddf3"
+
+    /**
+     * Insight Title: heat map only column measure
+     * Insight ID: 1259dbe9-bd76-4158-8768-8d826346661d
+     */,
+    HeatMapOnlyColumnMeasure: "1259dbe9-bd76-4158-8768-8d826346661d"
+
+    /**
+     * Insight Title: heat map only row measure
+     * Insight ID: 1b2a3b52-2209-4b78-8d98-def92a93cffa
+     */,
+    HeatMapOnlyRowMeasure: "1b2a3b52-2209-4b78-8d98-def92a93cffa"
+
+    /**
+     * Insight Title: table transpose row left
+     * Insight ID: 4dae24d9-8219-41aa-8e4f-1e827eb6b841
+     */,
+    TableTransposeRowLeft: "4dae24d9-8219-41aa-8e4f-1e827eb6b841"
+
+    /**
+     * Insight Title: table only rows and measures
+     * Insight ID: 51067ec5-0a24-474d-9db7-177947c03721
+     */,
+    TableOnlyRowsAndMeasures: "51067ec5-0a24-474d-9db7-177947c03721"
+    /**
+
+     /**
+     * Insight Title: bullet with two attribute same bucket
+     * Insight ID: 563e58ef-e2be-4b17-99c0-82bf8beed212
+     */,
+    BulletWithTwoAttributeSameBucket: "563e58ef-e2be-4b17-99c0-82bf8beed212"
+
+    /**
+     * Insight Title: Bubble chart by year
+     * Insight ID: 5985d72e-4fc2-41d7-934a-17ee1beeee27
+     */,
+    BubbleChartByYear: "5985d72e-4fc2-41d7-934a-17ee1beeee27"
+
+    /**
+     * Insight Title: Table with years
+     * Insight ID: 739a5b35-a67f-4f64-b72b-7bf4983b762c
+     */,
+    TableWithYears: "739a5b35-a67f-4f64-b72b-7bf4983b762c"
+
+    /**
+     * Insight Title: table only row and column
+     * Insight ID: 73a0369b-ca73-4fba-8378-bf79eef74322
+     */,
+    TableOnlyRowAndColumn: "73a0369b-ca73-4fba-8378-bf79eef74322"
+
+    /**
+     * Insight Title: Column chart with years
+     * Insight ID: a69dd37d-0f7a-4848-852d-a6233a66fc32
+     */,
+    ColumnChartWithYears: "a69dd37d-0f7a-4848-852d-a6233a66fc32"
+
+    /**
+     * Insight Title: table has only measure and columns
+     * Insight ID: b7a3e512-9dcc-4d76-a76d-37a6837684a5
+     */,
+    TableHasOnlyMeasureAndColumns: "b7a3e512-9dcc-4d76-a76d-37a6837684a5"
+
+    /**
+     * Insight Title: Column with two drillable attributes
+     * Insight ID: c06958a4-6fe7-43dd-af1d-5d373b2a32a9
+     */,
+    ColumnWithTwoDrillableAttributes: "c06958a4-6fe7-43dd-af1d-5d373b2a32a9"
+
+    /**
+     * Insight Title: Table Activity by Year and Department
+     * Insight ID: d534b820-56f9-48c9-8f49-160968a062a9
+     */,
+    TableActivityByYearAndDepartment: "d534b820-56f9-48c9-8f49-160968a062a9"
+
+    /**
+     * Insight Title: Chart Activity by Department
+     * Insight ID: e11a6dfd-32a7-4d6e-acbd-346099e32eb8
+     */,
+    ChartActivityByDepartment: "e11a6dfd-32a7-4d6e-acbd-346099e32eb8"
+
+    /**
+     * Insight Title: table only rows
+     * Insight ID: e93e85ce-b29a-4158-9fdc-19a2b4655962
+     */,
+    TableOnlyRows: "e93e85ce-b29a-4158-9fdc-19a2b4655962"
+
+    /**
+     * Insight Title: heat map has measure column row
+     * Insight ID: fdcb381c-a979-4c63-9588-828cafa4227a
+     */,
+    HeatMapHasMeasureColumnRow: "fdcb381c-a979-4c63-9588-828cafa4227a",
 };
 export const Dashboards = {
     /**
@@ -2796,4 +2892,40 @@ export const Dashboards = {
      * Dashboard Title: KD with invalid insight
      * Dashboard ID: f50c7076-1d45-4031-a4fd-564459254b12
      */ KDWithInvalidInsight: "f50c7076-1d45-4031-a4fd-564459254b12",
+
+    /**
+     * Dashboard Title: Dashboard table drill down
+     * Dashboard ID: 13aa9700-1701-4152-9eaf-5665d27c9760
+     */
+    DashboardTableDrillDown: "13aa9700-1701-4152-9eaf-5665d27c9760",
+
+    /**
+     * Dashboard Title: Target board
+     * Dashboard ID: 3d946064-8b9e-4662-9fb1-e61bb1d90872
+     */
+    TargetBoard: "3d946064-8b9e-4662-9fb1-e61bb1d90872",
+
+    /**
+     * Dashboard Title: Implicit drill
+     * Dashboard ID: 54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2
+     */
+    ImplicitDrill: "54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2",
+
+    /**
+     * Dashboard Title: Insight chart with years
+     * Dashboard ID: e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc
+     */
+    InsightChartWithYears: "e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc",
+
+    /**
+     * Dashboard Title: Heat map chart with stack data
+     * Dashboard ID: f99c4d22-c996-41d9-85ff-7cbf7188583b
+     */
+    HeatMapChartWithStackData: "f99c4d22-c996-41d9-85ff-7cbf7188583b",
+
+    /**
+     * Dashboard Title: Dashboard drilldown on chart
+     * Dashboard ID: ffaf68da-6fc6-4ea9-afca-b3edb0d54cd6
+     */
+    DashboardDrilldownOnChart: "ffaf68da-6fc6-4ea9-afca-b3edb0d54cd6",
 };
