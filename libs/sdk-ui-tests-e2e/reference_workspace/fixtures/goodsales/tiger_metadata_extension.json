@@ -487,11 +487,6 @@
                     },
                     "version": "2"
                 },
-                "createdAt": "2023-11-20 04:46",
-                "createdBy": {
-                    "id": "qa.tiger1",
-                    "type": "user"
-                },
                 "description": "",
                 "id": "e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc",
                 "title": "Insight chart with years"
@@ -631,11 +626,6 @@
                         "type": "IDashboardLayout"
                     },
                     "version": "2"
-                },
-                "createdAt": "2023-11-20 08:00",
-                "createdBy": {
-                    "id": "qa.tiger1",
-                    "type": "user"
                 },
                 "description": "",
                 "id": "f99c4d22-c996-41d9-85ff-7cbf7188583b",
@@ -780,22 +770,8 @@
                     },
                     "version": "2"
                 },
-                "createdAt": "2023-10-30 05:37",
-                "createdBy": {
-                    "id": "admin",
-                    "type": "user"
-                },
                 "description": "",
                 "id": "62554df1-31a8-49c7-bfed-524771a83b1a",
-                "permissions": [
-                    {
-                        "assignee": {
-                            "id": "admin",
-                            "type": "user"
-                        },
-                        "name": "EDIT"
-                    }
-                ],
                 "title": "Dashboard Readonly Date Filter"
             },
             {
@@ -860,11 +836,6 @@
                         "type": "IDashboardLayout"
                     },
                     "version": "2"
-                },
-                "createdAt": "2023-10-30 05:35",
-                "createdBy": {
-                    "id": "admin",
-                    "type": "user"
                 },
                 "description": "",
                 "id": "c4e4916e-ccc2-46d1-8202-8321249ec2a3",
@@ -2770,11 +2741,6 @@
                         "type": "IDashboardLayout"
                     },
                     "version": "2"
-                },
-                "createdAt": "2023-09-05 15:20",
-                "createdBy": {
-                    "id": "admin",
-                    "type": "user"
                 },
                 "description": "",
                 "id": "51ab79db-d7aa-44fe-ba93-404d83f071d3",
