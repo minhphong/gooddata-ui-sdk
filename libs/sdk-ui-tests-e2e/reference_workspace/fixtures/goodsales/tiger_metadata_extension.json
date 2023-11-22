@@ -2778,20 +2778,6 @@
                 },
                 "description": "",
                 "id": "51ab79db-d7aa-44fe-ba93-404d83f071d3",
-                "modifiedAt": "2023-09-05 17:05",
-                "modifiedBy": {
-                    "id": "admin",
-                    "type": "user"
-                },
-                "permissions": [
-                    {
-                        "assignee": {
-                            "id": "admin",
-                            "type": "user"
-                        },
-                        "name": "EDIT"
-                    }
-                ],
                 "title": "Dashboard Testing"
             },
             {
@@ -7130,11 +7116,6 @@
                 },
                 "description": "",
                 "id": "739a5b35-a67f-4f64-b72b-7bf4983b762c",
-                "modifiedAt": "2023-11-20 04:54",
-                "modifiedBy": {
-                    "id": "qa.tiger1",
-                    "type": "user"
-                },
                 "title": "Table with years"
             },
             {
