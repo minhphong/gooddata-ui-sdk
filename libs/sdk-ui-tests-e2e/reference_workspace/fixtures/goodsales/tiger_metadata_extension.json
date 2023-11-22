@@ -2822,6 +2822,69 @@
         "filterContexts": [
             {
                 "content": {
+                    "filters": [],
+                    "version": "2"
+                },
+                "description": "",
+                "id": "43e9bfac-ad86-4a1a-9c1f-0c9ba1de3a27",
+                "title": "filterContext"
+            },
+            {
+                "content": {
+                    "filters": [],
+                    "version": "2"
+                },
+                "description": "",
+                "id": "be65adf1-3394-418c-ad98-67abf92a46e7",
+                "title": "filterContext"
+            },
+            {
+                "content": {
+                    "filters": [],
+                    "version": "2"
+                },
+                "description": "",
+                "id": "34af0d44-c942-4ef7-9bb1-1ed89b2c4e20",
+                "title": "filterContext"
+            },
+            {
+                "content": {
+                    "filters": [
+                        {
+                            "dateFilter": {
+                                "from": 0,
+                                "granularity": "GDC.time.month",
+                                "to": 0,
+                                "type": "relative"
+                            }
+                        }
+                    ],
+                    "version": "2"
+                },
+                "description": "",
+                "id": "2663809c-67de-4dd6-a6d6-445bd44460b8",
+                "title": "filterContext"
+            },
+            {
+                "content": {
+                    "filters": [],
+                    "version": "2"
+                },
+                "description": "",
+                "id": "649fd625-57a0-4c92-b197-3914ec980cce",
+                "title": "filterContext"
+            },
+            {
+                "content": {
+                    "filters": [],
+                    "version": "2"
+                },
+                "description": "",
+                "id": "5c546380-41cb-4057-b149-ab312336b701",
+                "title": "filterContext"
+            },
+            {
+                "content": {
                     "filters": [
                         {
                             "dateFilter": {
