@@ -67,24 +67,79 @@ export class Api {
         });
     };
 
+    postDrillDownHierarchy = (drillId: string, drillFromAttribute: string, drillToAttribute: string) => {
+            cy.request({
+                method: "POST",
+                url: `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies`,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    data: {
+                        type: "attributeHierarchy",
+                        id: drillId,
+                        attributes: {
+                            title: drillId,
+                            description: drillId,
+                            tags: [
+                                "string"
+                            ],
+                            areRelationsValid: true,
+                            content: {
+                                attributes: [
+                                    {
+                                        identifier: {
+                                            type: "attribute",
+                                            id: drillFromAttribute
+                                        }
+                                    },
+                                    {
+                                        identifier: {
+                                            type: "attribute",
+                                            id: drillToAttribute
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }),
+            }).then((response) => {
+                expect(response.status).eq(200);
+            });
+    };
+
+    deleteDrillDownHierarchy = (drillId: string) => {
+        cy.request({
+            method: "DELETE",
+            url: `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/${drillId}`,
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }).then((response) => {
+            expect(response.status).eq(204);
+        });
+    }
+
     setUpDrillDownAttribute = (drillFromAttribute: string, drillToAttribute?: string) => {
         if (getBackend() !== "BEAR") {
             return;
-        }
 
-        cy.request({
-            method: "GET",
-            url: `${getHost()}/gdc/md/${getProjectId()}/obj/${drillFromAttribute}`,
-            headers: {
-                Accept: "application/json",
-            },
-        }).then((response) => {
-            expect(response.status).eq(200);
-            const payload = response.body;
-            drillToAttribute
-                ? (payload.attribute.content.drillDownStepAttributeDF = `/gdc/md/${getProjectId()}/obj/${drillToAttribute}`)
-                : delete payload.attribute.content.drillDownStepAttributeDF;
-            this.postDrillDownAttribute(drillFromAttribute, payload);
-        });
-    };
+            cy.request({
+                method: "GET",
+                url: `${getHost()}/gdc/md/${getProjectId()}/obj/${drillFromAttribute}`,
+                headers: {
+                    Accept: "application/json",
+                },
+            }).then((response) => {
+                expect(response.status).eq(200);
+                const payload = response.body;
+                drillToAttribute
+                    ? (payload.attribute.content.drillDownStepAttributeDF = `/gdc/md/${getProjectId()}/obj/${drillToAttribute}`)
+                    : delete payload.attribute.content.drillDownStepAttributeDF;
+                this.postDrillDownAttribute(drillFromAttribute, payload);
+            });
+        }
+        ;
+    }
 }

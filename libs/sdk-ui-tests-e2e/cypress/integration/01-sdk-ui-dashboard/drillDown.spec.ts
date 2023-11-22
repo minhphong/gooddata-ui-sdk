@@ -7,6 +7,7 @@ import { DateFilter } from "../../tools/dateFilter";
 import { DateFilterValue } from "../../tools/enum/DateFilterValue";
 import { Api } from "../../tools/api";
 import { DateFilterAbsoluteForm } from "../../tools/dateFilterAbsoluteForm";
+import {getBackend} from "../../support/constants";
 
 const drillModal = new DrillToModal();
 const api = new Api();
@@ -16,6 +17,9 @@ const INSIDE_SALES = "Inside Sales";
 const YEAR_2010 = "2010";
 const DEPARTMENT_ID = "1090";
 const PRODUCT_ID = "1057";
+const DEPARTMENT_ID_PANTHER = "f_owner.department_id";
+const PRODUCT_ID_PANTHER = "attr.f_product.product";
+const DRILL_ID_PANTHER = "drill panther"
 const YEAR_CLOSE = "521";
 const DISPLAYFORM_PRODUCT = "1056";
 
@@ -85,15 +89,23 @@ const heatmapInsights = [
 describe("Drilling", () => {
     beforeEach(() => {
         // Sets drilling on Department attribute into Product attribute
-        api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
+        if(getBackend() !== "BEAR") {
+            api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+        } else {
+            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
+        }
     });
 
     afterEach(() => {
         // Removes drilling from Department attribute
-        api.setUpDrillDownAttribute(DEPARTMENT_ID);
+        if(getBackend() !== "BEAR") {
+            api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
+        } else {
+            api.setUpDrillDownAttribute(DEPARTMENT_ID);
+        }
     });
 
-    describe("Basic drill down", { tags: ["checklist_integrated_bear"] }, () => {
+    describe("Basic drill down", { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] }, () => {
         it("Should drill down on table with one drillable", () => {
             Navigation.visit("dashboard/dashboard-table-drill-down");
             dashboardTable.forEach((insight, index) => {
@@ -520,7 +532,7 @@ describe("Drilling", () => {
         });
     });
 
-    describe("Advanced drill down", { tags: ["post-merge_integrated_bear"] }, () => {
+    describe("Advanced drill down", { tags: ["post-merge_integrated_bear", "checklist_integrated_tiger"] }, () => {
         it("Drill down on column with one drillable on drill to insight", () => {
             Navigation.visit("dashboard/drill-to-insight");
             new Widget(2).waitTableLoaded().getTable().click(0, 0);
