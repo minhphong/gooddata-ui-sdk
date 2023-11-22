@@ -124,22 +124,21 @@ export class Api {
     setUpDrillDownAttribute = (drillFromAttribute: string, drillToAttribute?: string) => {
         if (getBackend() !== "BEAR") {
             return;
-
-            cy.request({
-                method: "GET",
-                url: `${getHost()}/gdc/md/${getProjectId()}/obj/${drillFromAttribute}`,
-                headers: {
-                    Accept: "application/json",
-                },
-            }).then((response) => {
-                expect(response.status).eq(200);
-                const payload = response.body;
-                drillToAttribute
-                    ? (payload.attribute.content.drillDownStepAttributeDF = `/gdc/md/${getProjectId()}/obj/${drillToAttribute}`)
-                    : delete payload.attribute.content.drillDownStepAttributeDF;
-                this.postDrillDownAttribute(drillFromAttribute, payload);
-            });
         }
-        ;
-    }
+
+        cy.request({
+            method: "GET",
+            url: `${getHost()}/gdc/md/${getProjectId()}/obj/${drillFromAttribute}`,
+            headers: {
+                Accept: "application/json",
+            },
+        }).then((response) => {
+            expect(response.status).eq(200);
+            const payload = response.body;
+            drillToAttribute
+                ? (payload.attribute.content.drillDownStepAttributeDF = `/gdc/md/${getProjectId()}/obj/${drillToAttribute}`)
+                : delete payload.attribute.content.drillDownStepAttributeDF;
+            this.postDrillDownAttribute(drillFromAttribute, payload);
+        });
+    };
 }
