@@ -7465,11 +7465,6 @@
                     "version": "2",
                     "visualizationUrl": "local:table"
                 },
-                "createdAt": "2023-11-20 00:09",
-                "createdBy": {
-                    "id": "qa.tiger1",
-                    "type": "user"
-                },
                 "description": "",
                 "id": "e93e85ce-b29a-4158-9fdc-19a2b4655962",
                 "title": "table only rows"
