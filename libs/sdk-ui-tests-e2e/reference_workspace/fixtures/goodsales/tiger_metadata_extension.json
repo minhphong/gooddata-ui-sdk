@@ -7717,6 +7717,149 @@
                 "description": "",
                 "id": "1b2a3b52-2209-4b78-8d98-def92a93cffa",
                 "title": "heat map only row measure"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "f84a689ff17a40b88cf911a627928ee4",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "e0dafae601684f4589beb6b3b5898ab4"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "attribute"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.region_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "e0f2bcd46f67401888ab13cdfeb2450a"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "columns"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [
+                        {
+                            "attributeSortItem": {
+                                "attributeIdentifier": "e0dafae601684f4589beb6b3b5898ab4",
+                                "direction": "asc"
+                            }
+                        }
+                    ],
+                    "version": "2",
+                    "visualizationUrl": "local:table"
+                },
+                "description": "",
+                "id": "77f69714-f57b-4d61-90f2-423a3f1c3700",
+                "title": "table has row column measure"
+            },
+            {
+                "content": {
+                    "buckets": [
+                        {
+                            "items": [
+                                {
+                                    "measure": {
+                                        "definition": {
+                                            "measureDefinition": {
+                                                "filters": [],
+                                                "item": {
+                                                    "identifier": {
+                                                        "id": "87a053b0-3947-49f3-b0c5-de53fd01f050",
+                                                        "type": "metric"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "localIdentifier": "4448b3129326437dbbff440f607c2669",
+                                        "title": "Amount"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "measures"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "f_owner.department_id",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "dadb25714a014c8e8c434478c9dbed2e"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "view"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "attribute": {
+                                        "displayForm": {
+                                            "identifier": {
+                                                "id": "dt_closedate_timestamp.year",
+                                                "type": "label"
+                                            }
+                                        },
+                                        "localIdentifier": "e82591e82c844c9ea01153b9de8200ce"
+                                    }
+                                }
+                            ],
+                            "localIdentifier": "stack"
+                        }
+                    ],
+                    "filters": [],
+                    "properties": {},
+                    "sorts": [],
+                    "version": "2",
+                    "visualizationUrl": "local:column"
+                },
+                "description": "",
+                "id": "c06958a4-6fe7-43dd-af1d-5d373b2a32a9",
+                "title": "Column with two drillable attributes"
             }
         ]
     }
