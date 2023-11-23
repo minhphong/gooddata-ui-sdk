@@ -73,9 +73,9 @@ export class Api {
             url: `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies`,
             headers: {
                 Authorization: `BEARER ${getTigerAuthToken()}`,
-                "Content-Type": "application/vnd.gooddata.api+json"
+                "Content-Type": "application/vnd.gooddata.api+json",
             },
-            body: JSON.stringify({
+            body: {
                 data: {
                     type: "attributeHierarchy",
                     id: drillId,
@@ -102,7 +102,7 @@ export class Api {
                         },
                     },
                 },
-            }),
+            },
         }).then((response) => {
             cy.log(
                 "here is hierachy",
