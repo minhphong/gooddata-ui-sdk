@@ -72,10 +72,10 @@ export class Api {
         const  body = {
                 data: {
                     type: "attributeHierarchy",
-                    id: "drillId",
+                    id: drillId,
                     attributes: {
-                        title: "drillId",
-                        description: "drillId",
+                        title: drillId,
+                        description: drillId,
                         tags: ["string"],
                         areRelationsValid: true,
                         content: {
@@ -83,13 +83,13 @@ export class Api {
                                 {
                                     identifier: {
                                         type: "attribute",
-                                        id: "drillId",
+                                        id: drillFromAttribute,
                                     },
                                 },
                                 {
                                     identifier: {
                                         type: "attribute",
-                                        id: "drillId"e,
+                                        id: drillToAttribute,
                                     },
                                 },
                             ],
