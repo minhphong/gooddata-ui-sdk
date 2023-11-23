@@ -72,7 +72,8 @@ export class Api {
             method: "POST",
             url: `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies`,
             headers: {
-                "Content-Type": "application/vnd.gooddata.api+json",
+                Authorization: `BEARER ${getTigerAuthToken()}`,
+                "Content-Type": "application/vnd.gooddata.api+json"
             },
             body: JSON.stringify({
                 data: {
