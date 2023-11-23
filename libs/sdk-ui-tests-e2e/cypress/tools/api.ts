@@ -68,6 +68,7 @@ export class Api {
     };
 
     postDrillDownHierarchy = (drillId: string, drillFromAttribute: string, drillToAttribute: string) => {
+        Api.injectAuthHeader(getTigerAuthToken());
         const  body = {
                 data: {
                     type: "attributeHierarchy",
@@ -96,7 +97,7 @@ export class Api {
                     },
                 },
             };
-        const url = `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`;
+        const url = `/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`;
         return Api.request("POST", url, body);
     };
 
