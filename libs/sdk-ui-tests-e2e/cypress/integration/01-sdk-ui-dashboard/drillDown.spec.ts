@@ -110,6 +110,7 @@ describe("Drilling", () => {
         () => {
             it("Should drill down on table with one drillable", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
+                cy.wait(1000000000000);
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
                     drillModal.waitForDrillModalViz().hasTitleHeader(insight.title + " › " + DIRECT_SALES);
