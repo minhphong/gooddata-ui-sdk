@@ -6769,16 +6769,7 @@
                         {
                             "items": [
                                 {
-                                    "attribute": {
-                                        "displayForm": {
-                                            "identifier": {
-                                                "id": "f_owner.region_id",
-                                                "type": "label"
-                                            }
-                                        },
-                                        "localIdentifier": "ca076ec85db5497a8846b9809760fb93"
-                                    },
-                                "measure": {
+                                    "measure": {
                                         "definition": {
                                             "measureDefinition": {
                                                 "filters": [],
@@ -6803,22 +6794,6 @@
                                     "attribute": {
                                         "displayForm": {
                                             "identifier": {
-                                                "id": "state_id.statename",
-                                                "type": "label"
-                                            }
-                                        },
-                                        "localIdentifier": "4656fee56a744d16a1cf6898dd34d5d5"
-                                    }
-                                },
-                                {
-                                    "attribute": {
-                                        "displayForm": {
-                                            "identifier": {
-                                                "id": "f_city.id.cityname",
-                                                "type": "label"
-                                            }
-                                        },
-                                        "localIdentifier": "37594b463016459f873d106dd29d111d"
                                                 "id": "f_owner.department_id",
                                                 "type": "label"
                                             }
@@ -6835,13 +6810,18 @@
                     "sorts": [
                         {
                             "attributeSortItem": {
-                                "attributeIdentifier": "ca076ec85db5497a8846b9809760fb93",
+                                "attributeIdentifier": "52c738c4577a49638eadd51b58abf972",
                                 "direction": "asc"
                             }
                         }
                     ],
                     "version": "2",
                     "visualizationUrl": "local:table"
+                },
+                "createdAt": "2023-11-20 00:13",
+                "createdBy": {
+                    "id": "qa.tiger1",
+                    "type": "user"
                 },
                 "description": "",
                 "id": "51067ec5-0a24-474d-9db7-177947c03721",
