@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2023-11-20T13:57:41.446Z; */
+/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2023-11-23T08:45:35.920Z; */
 // @ts-ignore ignore unused imports here if they happen (e.g. when there is no measure in the workspace)
 import {
     newAttribute,
@@ -16,14 +16,14 @@ import {
  */
 export const Account = {
     /**
-     * Display Form Title: Account
-     * Display Form ID: attr.f_account.account
-     */
-    Default: newAttribute("attr.f_account.account"),
-    /**
      * Display Form Title: Name
      * Display Form ID: label.f_account.account.name
-     */ Name: newAttribute("label.f_account.account.name"),
+     */
+    Name: newAttribute("label.f_account.account.name"),
+    /**
+     * Display Form Title: Account
+     * Display Form ID: attr.f_account.account
+     */ Default: newAttribute("attr.f_account.account"),
 };
 /**
  * Attribute Title: Activity
@@ -46,18 +46,18 @@ export const Activity = {
  */
 export const Opportunity = {
     /**
-     * Display Form Title: SFDC URL
-     * Display Form ID: label.f_opportunity.opportunity.sfdcurl
-     */
-    SFDCURL: newAttribute("label.f_opportunity.opportunity.sfdcurl"),
-    /**
      * Display Form Title: Opportunity
      * Display Form ID: attr.f_opportunity.opportunity
-     */ Default: newAttribute("attr.f_opportunity.opportunity"),
+     */
+    Default: newAttribute("attr.f_opportunity.opportunity"),
     /**
      * Display Form Title: Opportunity Name
      * Display Form ID: label.f_opportunity.opportunity.name
      */ Name: newAttribute("label.f_opportunity.opportunity.name"),
+    /**
+     * Display Form Title: SFDC URL
+     * Display Form ID: label.f_opportunity.opportunity.sfdcurl
+     */ SFDCURL: newAttribute("label.f_opportunity.opportunity.sfdcurl"),
 };
 /**
  * Attribute Title: Opp. Snapshot
@@ -169,25 +169,25 @@ export const City = {
      */
     Name: newAttribute("f_city.id.cityname"),
     /**
+     * Display Form Title: City short name
+     * Display Form ID: f_city.id.cityshortname
+     */ ShortName: newAttribute("f_city.id.cityshortname"),
+    /**
      * Display Form Title: Location
      * Display Form ID: f_city.id.location
      */ Location: newAttribute("f_city.id.location"),
-    /**
-     * Display Form Title: Longitude
-     * Display Form ID: f_city.id.longitude
-     */ Longitude: newAttribute("f_city.id.longitude"),
     /**
      * Display Form Title: City ascii name
      * Display Form ID: f_city.id.cityasciiname
      */ AsciiName: newAttribute("f_city.id.cityasciiname"),
     /**
-     * Display Form Title: City short name
-     * Display Form ID: f_city.id.cityshortname
-     */ ShortName: newAttribute("f_city.id.cityshortname"),
-    /**
      * Display Form Title: Latitude
      * Display Form ID: f_city.id.latitude
      */ Latitude: newAttribute("f_city.id.latitude"),
+    /**
+     * Display Form Title: Longitude
+     * Display Form ID: f_city.id.longitude
+     */ Longitude: newAttribute("f_city.id.longitude"),
     /**
      * Display Form Title: City
      * Display Form ID: f_city.id
@@ -2469,10 +2469,22 @@ export const DateDatasets = {
 };
 export const Insights = {
     /**
+     * Insight Title: heat map only measures
+     * Insight ID: 05828384-8719-4c2e-8270-7a66ef88ddf3
+     */
+    HeatMapOnlyMeasures: "05828384-8719-4c2e-8270-7a66ef88ddf3",
+    /**
+     * Insight Title: heat map only column measure
+     * Insight ID: 1259dbe9-bd76-4158-8768-8d826346661d
+     */ HeatMapOnlyColumnMeasure: "1259dbe9-bd76-4158-8768-8d826346661d",
+    /**
+     * Insight Title: heat map only row measure
+     * Insight ID: 1b2a3b52-2209-4b78-8d98-def92a93cffa
+     */ HeatMapOnlyRowMeasure: "1b2a3b52-2209-4b78-8d98-def92a93cffa",
+    /**
      * Insight Title: Table using long name metric
      * Insight ID: 1e17f8cf-aa34-4474-8dd5-c1249c688225
-     */
-    TableUsingLongNameMetric: "1e17f8cf-aa34-4474-8dd5-c1249c688225",
+     */ TableUsingLongNameMetric: "1e17f8cf-aa34-4474-8dd5-c1249c688225",
     /**
      * Insight Title: Table has AM metric
      * Insight ID: 343b329b-e2b0-43b2-9724-de8cd664ebac
@@ -2490,9 +2502,25 @@ export const Insights = {
      * Insight ID: 3ef94acb-1e15-49ef-88d5-e9e2931be959
      */ MergeCellsInsight: "3ef94acb-1e15-49ef-88d5-e9e2931be959",
     /**
+     * Insight Title: table transpose row left
+     * Insight ID: 4dae24d9-8219-41aa-8e4f-1e827eb6b841
+     */ TableTransposeRowLeft: "4dae24d9-8219-41aa-8e4f-1e827eb6b841",
+    /**
+     * Insight Title: table only rows and measures
+     * Insight ID: 51067ec5-0a24-474d-9db7-177947c03721
+     */ TableOnlyRowsAndMeasures: "51067ec5-0a24-474d-9db7-177947c03721",
+    /**
      * Insight Title: big insight
      * Insight ID: 5517045e-661f-4d6b-b0b0-98030ab9f68c
      */ BigInsight: "5517045e-661f-4d6b-b0b0-98030ab9f68c",
+    /**
+     * Insight Title: bullet with two attribute same bucket
+     * Insight ID: 563e58ef-e2be-4b17-99c0-82bf8beed212
+     */ BulletWithTwoAttributeSameBucket: "563e58ef-e2be-4b17-99c0-82bf8beed212",
+    /**
+     * Insight Title: Bubble chart by year
+     * Insight ID: 5985d72e-4fc2-41d7-934a-17ee1beeee27
+     */ BubbleChartByYear: "5985d72e-4fc2-41d7-934a-17ee1beeee27",
     /**
      * Insight Title: Headline
      * Insight ID: 6010ceaf-b8e9-4cd7-aea8-05da1f68f112
@@ -2518,13 +2546,21 @@ export const Insights = {
      * Insight ID: 6ecba0d9-8fff-4c78-8adf-7f33cc1956c8
      */ ColumnChartOnlyMeasures: "6ecba0d9-8fff-4c78-8adf-7f33cc1956c8",
     /**
+     * Insight Title: Table with years
+     * Insight ID: 739a5b35-a67f-4f64-b72b-7bf4983b762c
+     */ TableWithYears: "739a5b35-a67f-4f64-b72b-7bf4983b762c",
+    /**
+     * Insight Title: table only row and column
+     * Insight ID: 73a0369b-ca73-4fba-8378-bf79eef74322
+     */ TableOnlyRowAndColumn: "73a0369b-ca73-4fba-8378-bf79eef74322",
+    /**
      * Insight Title: Dependency wheel chart
      * Insight ID: 75e08348-d27f-42b8-a360-41bee971fb6d
      */ DependencyWheelChart: "75e08348-d27f-42b8-a360-41bee971fb6d",
     /**
-     * Insight Title: USA geography attribute table
-     * Insight ID: 780f3759-65cc-4489-858d-9c318ecece75
-     */ USAGeographyAttributeTable: "780f3759-65cc-4489-858d-9c318ecece75",
+     * Insight Title: table has row column measure
+     * Insight ID: 77f69714-f57b-4d61-90f2-423a3f1c3700
+     */ TableHasRowColumnMeasure: "77f69714-f57b-4d61-90f2-423a3f1c3700",
     /**
      * Insight Title: invalid insight
      * Insight ID: 81452cc9-558b-4b4e-a70b-0a80f3bd2924
@@ -2558,6 +2594,10 @@ export const Insights = {
      * Insight ID: a40866ab-5272-4f2c-9b5a-dd255b1e5d42
      */ ColumnChart: "a40866ab-5272-4f2c-9b5a-dd255b1e5d42",
     /**
+     * Insight Title: Column chart with years
+     * Insight ID: a69dd37d-0f7a-4848-852d-a6233a66fc32
+     */ ColumnChartWithYears: "a69dd37d-0f7a-4848-852d-a6233a66fc32",
+    /**
      * Insight Title: Table has many rows/columns
      * Insight ID: aa8db374-7a8b-4019-85df-25f47772db5d
      */ TableHasManyRowsColumns: "aa8db374-7a8b-4019-85df-25f47772db5d",
@@ -2578,9 +2618,17 @@ export const Insights = {
      * Insight ID: b69512f0-6285-4d4d-b31c-47b7b081276c
      */ TableTranspose: "b69512f0-6285-4d4d-b31c-47b7b081276c",
     /**
+     * Insight Title: table has only measure and columns
+     * Insight ID: b7a3e512-9dcc-4d76-a76d-37a6837684a5
+     */ TableHasOnlyMeasureAndColumns: "b7a3e512-9dcc-4d76-a76d-37a6837684a5",
+    /**
      * Insight Title: Combine with all filter types
      * Insight ID: ba13041b-87bc-458c-a514-fcc0074c9973
      */ CombineWithAllFilterTypes: "ba13041b-87bc-458c-a514-fcc0074c9973",
+    /**
+     * Insight Title: Column with two drillable attributes
+     * Insight ID: c06958a4-6fe7-43dd-af1d-5d373b2a32a9
+     */ ColumnWithTwoDrillableAttributes: "c06958a4-6fe7-43dd-af1d-5d373b2a32a9",
     /**
      * Insight Title: Negative Insight
      * Insight ID: c1f236a4-b48a-4bf6-a94f-a89d5bde2fe9
@@ -2614,6 +2662,10 @@ export const Insights = {
      * Insight ID: d44ccdf0-01b4-4faf-a4e1-2a7c5fc05ad1
      */ ColumnWithTwoMeasuresByDate: "d44ccdf0-01b4-4faf-a4e1-2a7c5fc05ad1",
     /**
+     * Insight Title: Table Activity by Year and Department
+     * Insight ID: d534b820-56f9-48c9-8f49-160968a062a9
+     */ TableActivityByYearAndDepartment: "d534b820-56f9-48c9-8f49-160968a062a9",
+    /**
      * Insight Title: With own description
      * Insight ID: d9ea05ec-5036-43a0-969f-a3ddecb1ca40
      */ WithOwnDescription: "d9ea05ec-5036-43a0-969f-a3ddecb1ca40",
@@ -2625,6 +2677,14 @@ export const Insights = {
      * Insight Title: Pie chart multiple measures
      * Insight ID: de6092cf-d243-4987-918b-8aac3ecd26cc
      */ PieChartMultipleMeasures: "de6092cf-d243-4987-918b-8aac3ecd26cc",
+    /**
+     * Insight Title: Chart Activity by Department
+     * Insight ID: e11a6dfd-32a7-4d6e-acbd-346099e32eb8
+     */ ChartActivityByDepartment: "e11a6dfd-32a7-4d6e-acbd-346099e32eb8",
+    /**
+     * Insight Title: table only rows
+     * Insight ID: e93e85ce-b29a-4158-9fdc-19a2b4655962
+     */ TableOnlyRows: "e93e85ce-b29a-4158-9fdc-19a2b4655962",
     /**
      * Insight Title: Pyramid chart
      * Insight ID: eb7f3b09-09e8-498b-bff5-249660ffcd6e
@@ -2658,101 +2718,9 @@ export const Insights = {
      * Insight ID: fbcca86f-c473-446b-b316-eb4f4e5de909
      */ TableWithStageNameAndAtributeFilter: "fbcca86f-c473-446b-b316-eb4f4e5de909",
     /**
-     * Insight Title: heat map only measures
-     * Insight ID: 05828384-8719-4c2e-8270-7a66ef88ddf3
-     */
-    HeatMapOnlyMeasures: "05828384-8719-4c2e-8270-7a66ef88ddf3"
-
-    /**
-     * Insight Title: heat map only column measure
-     * Insight ID: 1259dbe9-bd76-4158-8768-8d826346661d
-     */,
-    HeatMapOnlyColumnMeasure: "1259dbe9-bd76-4158-8768-8d826346661d"
-
-    /**
-     * Insight Title: heat map only row measure
-     * Insight ID: 1b2a3b52-2209-4b78-8d98-def92a93cffa
-     */,
-    HeatMapOnlyRowMeasure: "1b2a3b52-2209-4b78-8d98-def92a93cffa"
-
-    /**
-     * Insight Title: table transpose row left
-     * Insight ID: 4dae24d9-8219-41aa-8e4f-1e827eb6b841
-     */,
-    TableTransposeRowLeft: "4dae24d9-8219-41aa-8e4f-1e827eb6b841"
-
-    /**
-     * Insight Title: table only rows and measures
-     * Insight ID: 51067ec5-0a24-474d-9db7-177947c03721
-     */,
-    TableOnlyRowsAndMeasures: "51067ec5-0a24-474d-9db7-177947c03721"
-    /**
-
-     /**
-     * Insight Title: bullet with two attribute same bucket
-     * Insight ID: 563e58ef-e2be-4b17-99c0-82bf8beed212
-     */,
-    BulletWithTwoAttributeSameBucket: "563e58ef-e2be-4b17-99c0-82bf8beed212"
-
-    /**
-     * Insight Title: Bubble chart by year
-     * Insight ID: 5985d72e-4fc2-41d7-934a-17ee1beeee27
-     */,
-    BubbleChartByYear: "5985d72e-4fc2-41d7-934a-17ee1beeee27"
-
-    /**
-     * Insight Title: Table with years
-     * Insight ID: 739a5b35-a67f-4f64-b72b-7bf4983b762c
-     */,
-    TableWithYears: "739a5b35-a67f-4f64-b72b-7bf4983b762c"
-
-    /**
-     * Insight Title: table only row and column
-     * Insight ID: 73a0369b-ca73-4fba-8378-bf79eef74322
-     */,
-    TableOnlyRowAndColumn: "73a0369b-ca73-4fba-8378-bf79eef74322"
-
-    /**
-     * Insight Title: Column chart with years
-     * Insight ID: a69dd37d-0f7a-4848-852d-a6233a66fc32
-     */,
-    ColumnChartWithYears: "a69dd37d-0f7a-4848-852d-a6233a66fc32"
-
-    /**
-     * Insight Title: table has only measure and columns
-     * Insight ID: b7a3e512-9dcc-4d76-a76d-37a6837684a5
-     */,
-    TableHasOnlyMeasureAndColumns: "b7a3e512-9dcc-4d76-a76d-37a6837684a5"
-
-    /**
-     * Insight Title: Column with two drillable attributes
-     * Insight ID: c06958a4-6fe7-43dd-af1d-5d373b2a32a9
-     */,
-    ColumnWithTwoDrillableAttributes: "c06958a4-6fe7-43dd-af1d-5d373b2a32a9"
-
-    /**
-     * Insight Title: Table Activity by Year and Department
-     * Insight ID: d534b820-56f9-48c9-8f49-160968a062a9
-     */,
-    TableActivityByYearAndDepartment: "d534b820-56f9-48c9-8f49-160968a062a9"
-
-    /**
-     * Insight Title: Chart Activity by Department
-     * Insight ID: e11a6dfd-32a7-4d6e-acbd-346099e32eb8
-     */,
-    ChartActivityByDepartment: "e11a6dfd-32a7-4d6e-acbd-346099e32eb8"
-
-    /**
-     * Insight Title: table only rows
-     * Insight ID: e93e85ce-b29a-4158-9fdc-19a2b4655962
-     */,
-    TableOnlyRows: "e93e85ce-b29a-4158-9fdc-19a2b4655962"
-
-    /**
      * Insight Title: heat map has measure column row
      * Insight ID: fdcb381c-a979-4c63-9588-828cafa4227a
-     */,
-    HeatMapHasMeasureColumnRow: "fdcb381c-a979-4c63-9588-828cafa4227a",
+     */ HeatMapHasMeasureColumnRow: "fdcb381c-a979-4c63-9588-828cafa4227a",
 };
 export const Dashboards = {
     /**
@@ -2769,6 +2737,10 @@ export const Dashboards = {
      * Dashboard ID: 0e0cb428-c0db-45dc-946e-65b47287a94f
      */ KDWithStageName: "0e0cb428-c0db-45dc-946e-65b47287a94f",
     /**
+     * Dashboard Title: Dashboard table drill down
+     * Dashboard ID: 13aa9700-1701-4152-9eaf-5665d27c9760
+     */ DashboardTableDrillDown: "13aa9700-1701-4152-9eaf-5665d27c9760",
+    /**
      * Dashboard Title: Dashboard with unknown visualization class
      * Dashboard ID: 2326d431-ccb3-405e-a3d2-394bdf276e61
      */ DashboardWithUnknownVisualizationClass: "2326d431-ccb3-405e-a3d2-394bdf276e61",
@@ -2781,6 +2753,10 @@ export const Dashboards = {
      * Dashboard ID: 2dcc56ff-5ae6-49f1-ba97-9b76000ca4a1
      */ HeaderTests: "2dcc56ff-5ae6-49f1-ba97-9b76000ca4a1",
     /**
+     * Dashboard Title: Target board
+     * Dashboard ID: 3d946064-8b9e-4662-9fb1-e61bb1d90872
+     */ TargetBoard: "3d946064-8b9e-4662-9fb1-e61bb1d90872",
+    /**
      * Dashboard Title: Insight on dashboard
      * Dashboard ID: 46dbb7b3-468c-436f-a2ff-85fbf4e8d5ad
      */ InsightOnDashboard: "46dbb7b3-468c-436f-a2ff-85fbf4e8d5ad",
@@ -2788,6 +2764,10 @@ export const Dashboards = {
      * Dashboard Title: Dashboard Testing
      * Dashboard ID: 51ab79db-d7aa-44fe-ba93-404d83f071d3
      */ DashboardTesting: "51ab79db-d7aa-44fe-ba93-404d83f071d3",
+    /**
+     * Dashboard Title: Implicit drill
+     * Dashboard ID: 54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2
+     */ ImplicitDrill: "54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2",
     /**
      * Dashboard Title: KD has null value
      * Dashboard ID: 5a224af3-902c-4acd-ac75-bfa88d80e044
@@ -2809,10 +2789,13 @@ export const Dashboards = {
      * Dashboard ID: 62554df1-31a8-49c7-bfed-524771a83b1a
      */ DashboardReadonlyDateFilter: "62554df1-31a8-49c7-bfed-524771a83b1a",
     /**
+<<<<<<< HEAD
      * Dashboard Title: Dashboard with dependent filters
      * Dashboard ID: 6aac31b1-ba6c-40b6-b727-1c412d9e4d25
      */ DashboardWithDependentFilters: "6aac31b1-ba6c-40b6-b727-1c412d9e4d25",
     /**
+=======
+>>>>>>> 46b383b226 (TEST)
      * Dashboard Title: Dashboard column chart only measures
      * Dashboard ID: 6dcf6335-92cf-4b77-981f-a1f4d0763053
      */ DashboardColumnChartOnlyMeasures: "6dcf6335-92cf-4b77-981f-a1f4d0763053",
@@ -2885,6 +2868,10 @@ export const Dashboards = {
      * Dashboard ID: e1e6e5fe-95bc-41b9-bd8c-d9cf5e88a5d0
      */ KDWithManyDataInsight: "e1e6e5fe-95bc-41b9-bd8c-d9cf5e88a5d0",
     /**
+     * Dashboard Title: Insight chart with years
+     * Dashboard ID: e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc
+     */ InsightChartWithYears: "e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc",
+    /**
      * Dashboard Title: Dashboard order
      * Dashboard ID: ed0a80c8-4266-4cb6-88c7-48eafbe47c1d
      */ DashboardOrder: "ed0a80c8-4266-4cb6-88c7-48eafbe47c1d",
@@ -2894,38 +2881,11 @@ export const Dashboards = {
      */ KDWithInvalidInsight: "f50c7076-1d45-4031-a4fd-564459254b12",
 
     /**
-     * Dashboard Title: Dashboard table drill down
-     * Dashboard ID: 13aa9700-1701-4152-9eaf-5665d27c9760
-     */
-    DashboardTableDrillDown: "13aa9700-1701-4152-9eaf-5665d27c9760",
-
-    /**
-     * Dashboard Title: Target board
-     * Dashboard ID: 3d946064-8b9e-4662-9fb1-e61bb1d90872
-     */
-    TargetBoard: "3d946064-8b9e-4662-9fb1-e61bb1d90872",
-
-    /**
-     * Dashboard Title: Implicit drill
-     * Dashboard ID: 54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2
-     */
-    ImplicitDrill: "54a9c8bd-9b71-4fb5-a650-0ae766d8b9a2",
-
-    /**
-     * Dashboard Title: Insight chart with years
-     * Dashboard ID: e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc
-     */
-    InsightChartWithYears: "e7f1ac1a-1f87-46b0-b74b-4e5a758f42fc",
-
-    /**
      * Dashboard Title: Heat map chart with stack data
      * Dashboard ID: f99c4d22-c996-41d9-85ff-7cbf7188583b
-     */
-    HeatMapChartWithStackData: "f99c4d22-c996-41d9-85ff-7cbf7188583b",
-
+     */ HeatMapChartWithStackData: "f99c4d22-c996-41d9-85ff-7cbf7188583b",
     /**
      * Dashboard Title: Dashboard drilldown on chart
      * Dashboard ID: ffaf68da-6fc6-4ea9-afca-b3edb0d54cd6
-     */
-    DashboardDrilldownOnChart: "ffaf68da-6fc6-4ea9-afca-b3edb0d54cd6",
+    */DashboardDrilldownOnChart: "ffaf68da-6fc6-4ea9-afca-b3edb0d54cd6",
 };
