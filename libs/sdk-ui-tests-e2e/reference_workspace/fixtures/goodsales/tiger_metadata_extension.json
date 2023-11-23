@@ -6818,11 +6818,6 @@
                     "version": "2",
                     "visualizationUrl": "local:table"
                 },
-                "createdAt": "2023-11-20 00:13",
-                "createdBy": {
-                    "id": "qa.tiger1",
-                    "type": "user"
-                },
                 "description": "",
                 "id": "51067ec5-0a24-474d-9db7-177947c03721",
                 "title": "table only rows and measures"
