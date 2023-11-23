@@ -98,7 +98,7 @@ describe("Drilling", () => {
     afterEach(() => {
         // Removes drilling from Department attribute
         if (getBackend() !== "BEAR") {
-            api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
+            //api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
         } else {
             api.setUpDrillDownAttribute(DEPARTMENT_ID);
         }
