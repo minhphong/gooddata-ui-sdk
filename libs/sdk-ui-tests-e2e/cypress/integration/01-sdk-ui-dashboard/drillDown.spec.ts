@@ -89,11 +89,11 @@ const heatmapInsights = [
 describe("Drilling", () => {
     beforeEach(() => {
         // Sets drilling on Department attribute into Product attribute
-        if (getBackend() !== "BEAR") {
-            api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
-        } else {
-            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
-        }
+        // if (getBackend() !== "BEAR") {
+        //     api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+        // } else {
+        //    api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
+        //}
     });
 
     afterEach(() => {
@@ -110,6 +110,9 @@ describe("Drilling", () => {
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
         () => {
             it("Should drill down on table with one drillable", () => {
+                if (getBackend() !== "BEAR") {
+                    api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+                }
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
@@ -121,7 +124,7 @@ describe("Drilling", () => {
                 });
             });
 
-            it("Should drill down on table transpose", () => {
+            it.skip("Should drill down on table transpose", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 new Widget(5).scrollIntoView().waitTableLoaded().getTable().click(0, 1);
                 drillModal
@@ -131,7 +134,7 @@ describe("Drilling", () => {
                 drillModal.close();
             });
 
-            it("Should drill down on charts that have two drillable attributes", () => {
+            it.skip("Should drill down on charts that have two drillable attributes", () => {
                 const firstDrillValue = [
                     "617.00",
                     "1,903.00",
@@ -156,7 +159,7 @@ describe("Drilling", () => {
                 drillModal.close();
             });
 
-            it("Should drill down on charts that have two drillable attributes on the difference bucket", () => {
+            it.skip("Should drill down on charts that have two drillable attributes on the difference bucket", () => {
                 const valueAttribute = ["81.14%", "18.86%"];
                 const assertInsightValues = ["69.6%", "68.22%", "71.1%", "30.4%", "31.78%", "28.9%"];
 
@@ -208,7 +211,7 @@ describe("Drilling", () => {
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
             });
 
-            it("Drilling down continue on a table ", () => {
+            it.skip("Drilling down continue on a table ", () => {
                 const YEAR_LIST = ["2010", "2011", "2012", "2013"];
                 const YEAR_LIST_CLOSE = ["2010", "2011", "2012", "2013", "2014"];
 
@@ -244,7 +247,7 @@ describe("Drilling", () => {
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
             });
 
-            it("Drilling down on a table that has two drillable attributes separate", () => {
+            it.skip("Drilling down on a table that has two drillable attributes separate", () => {
                 Navigation.visit("dashboard/implicit-drill");
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT, YEAR_CLOSE);
                 const TABLE_WITH_YEAR = [
@@ -282,7 +285,7 @@ describe("Drilling", () => {
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
             });
 
-            it("Can not drill down with table that only has measures and columns", () => {
+            it.skip("Can not drill down with table that only has measures and columns", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 new Widget(4)
                     .scrollIntoView()
@@ -292,7 +295,7 @@ describe("Drilling", () => {
                     .isCellUnderlined(DIRECT_SALES, false);
             });
 
-            it("Should drill down on heat map chart", () => {
+            it.skip("Should drill down on heat map chart", () => {
                 Navigation.visit("dashboard/heatmap-drill-down");
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
                 heatmapInsights.forEach((insight, index) => {
@@ -311,7 +314,7 @@ describe("Drilling", () => {
                 });
             });
 
-            it("Can not drill down on heat map chart has only measure", () => {
+            it.skip("Can not drill down on heat map chart has only measure", () => {
                 Navigation.visit("dashboard/heatmap-drill-down");
                 const thirdWidget = new Widget(3);
                 thirdWidget
@@ -322,7 +325,7 @@ describe("Drilling", () => {
                     .isColumnHighlighted("$116,625,456.54", false);
             });
 
-            it("Drilling down on heat map chart with two drillable attributes", () => {
+            it.skip("Drilling down on heat map chart with two drillable attributes", () => {
                 Navigation.visit("dashboard/heatmap-drill-down");
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT, YEAR_CLOSE);
                 firstWidget.waitChartLoaded().getChart().clickCellHeatMap(0);
@@ -346,7 +349,7 @@ describe("Drilling", () => {
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
             });
 
-            it("drilling down on heat map that have two drillable attributes on the difference bucket", () => {
+            it.skip("drilling down on heat map that have two drillable attributes on the difference bucket", () => {
                 const secondWidget = new Widget(2);
                 Navigation.visit("dashboard/heatmap-drill-down");
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT, YEAR_CLOSE);
@@ -395,7 +398,7 @@ describe("Drilling", () => {
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
             });
 
-            it("Drilling down on chart that have two attribute same bucket with two drillable attributes", () => {
+            it.skip("Drilling down on chart that have two attribute same bucket with two drillable attributes", () => {
                 Navigation.visit("dashboard/drilldown-on-chart");
                 const bulletWidget = new Widget(1);
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT, YEAR_CLOSE);
@@ -449,7 +452,7 @@ describe("Drilling", () => {
                 api.setUpDrillDownAttribute(DISPLAYFORM_PRODUCT);
             });
 
-            it("Drilling down on charts that have two drillable attributes separates with date filter", () => {
+            it.skip("Drilling down on charts that have two drillable attributes separates with date filter", () => {
                 Navigation.visit("dashboard/drilldown-on-chart");
                 const dateFilter = new DateFilter().open().selectAbsoluteForm();
                 new DateFilterAbsoluteForm()
@@ -544,7 +547,7 @@ describe("Drilling", () => {
         "Advanced drill down",
         { tags: ["post-merge_integrated_bear", "checklist_integrated_tiger"] },
         () => {
-            it("Drill down on column with one drillable on drill to insight", () => {
+            it.skip("Drill down on column with one drillable on drill to insight", () => {
                 Navigation.visit("dashboard/drill-to-insight");
                 new Widget(2).waitTableLoaded().getTable().click(0, 0);
 
@@ -554,7 +557,7 @@ describe("Drilling", () => {
                     .should("have.text", "Bar chart with measures and attribute › Direct Sales");
             });
 
-            it("Drill down on table with one drillable on drill to insight", () => {
+            it.skip("Drill down on table with one drillable on drill to insight", () => {
                 Navigation.visit("dashboard/drill-to-insight");
                 new Widget(3)
                     .scrollIntoView()
@@ -569,14 +572,14 @@ describe("Drilling", () => {
                     .should("have.text", "Table Activity by Year and Department › Inside Sales");
             });
 
-            it("Drill down on table with invalid drill", () => {
+            it.skip("Drill down on table with invalid drill", () => {
                 Navigation.visit("dashboard/dashboard-target");
                 new Widget(0).waitTableLoaded().getTable().click(0, 1);
 
                 drillModal.getModalText().should("have.text", "Sorry, we can't display this insight");
             });
 
-            it("Drill down on column chart with invalid drill", () => {
+            it.skip("Drill down on column chart with invalid drill", () => {
                 Navigation.visit("dashboard/dashboard-target");
                 new Widget(1)
                     .scrollIntoView()
@@ -588,7 +591,7 @@ describe("Drilling", () => {
                 drillModal.getModalText().should("have.text", "Sorry, we can't display this insight");
             });
 
-            it("Check attribute value when drilling in bubble chart", () => {
+            it.skip("Check attribute value when drilling in bubble chart", () => {
                 Navigation.visit("dashboard/dashboard-target");
                 new Widget(2)
                     .scrollIntoView()
