@@ -68,13 +68,7 @@ export class Api {
     };
 
     postDrillDownHierarchy = (drillId: string, drillFromAttribute: string, drillToAttribute: string) => {
-        cy.request({
-            method: "POST",
-            url: `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies`,
-            headers: {
-                "Content-Type": "application/vnd.gooddata.api+json",
-            },
-            body: {
+        const  body = {
                 data: {
                     type: "attributeHierarchy",
                     id: drillId,
@@ -101,26 +95,14 @@ export class Api {
                         },
                     },
                 },
-            },
-        }).then((response) => {
-            cy.log(
-                "here is hierachy",
-                `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies`,
-            );
-            expect(response.status).eq(200);
-        });
+            };
+        const url = `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`;
+        return Api.request("POST", url, body);
     };
 
     deleteDrillDownHierarchy = (drillId: string) => {
-        cy.request({
-            method: "DELETE",
-            url: `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/${drillId}`,
-            headers: {
-                "Content-Type": "application/json",
-            },
-        }).then((response) => {
-            expect(response.status).eq(200);
-        });
+        const url = `${getHost()}/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/${drillId}`;
+        return Api.request("DELETE", url);
     };
 
     setUpDrillDownAttribute = (drillFromAttribute: string, drillToAttribute?: string) => {
