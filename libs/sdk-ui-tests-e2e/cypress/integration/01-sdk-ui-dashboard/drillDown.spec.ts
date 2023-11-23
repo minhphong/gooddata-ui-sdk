@@ -88,12 +88,11 @@ const heatmapInsights = [
 
 describe("Drilling", () => {
     beforeEach(() => {
-        // Sets drilling on Department attribute into Product attribute
-        // if (getBackend() !== "BEAR") {
-        //     api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
-        // } else {
-        //    api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
-        //}
+        if (getBackend() !== "BEAR") {
+            api.postDrillDownHierarchy(DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+        } else {
+           api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
+        }
     });
 
     afterEach(() => {
@@ -110,9 +109,6 @@ describe("Drilling", () => {
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
         () => {
             it("Should drill down on table with one drillable", () => {
-                if (getBackend() !== "BEAR") {
-                    api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
-                }
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);

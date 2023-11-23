@@ -67,8 +67,7 @@ export class Api {
         });
     };
 
-    postDrillDownHierarchy = (drillId: string, drillFromAttribute: string, drillToAttribute: string) => {
-        Api.injectAuthHeader(getTigerAuthToken());
+    postDrillDownHierarchy = ( drillFromAttribute: string, drillToAttribute: string) => {
         const  body = {
                 data: {
                     type: "attributeHierarchy",
