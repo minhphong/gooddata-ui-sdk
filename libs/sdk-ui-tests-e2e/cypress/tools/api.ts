@@ -67,11 +67,11 @@ export class Api {
         });
     };
 
-    postDrillDownHierarchy = ( drillFromAttribute: string, drillToAttribute: string) => {
+    postDrillDownHierarchy = (drillId:string, drillFromAttribute: string, drillToAttribute: string) => {
         const  body = {
                 data: {
                     type: "attributeHierarchy",
-                    id: "attributeHierarchy",
+                    id: drillId,
                     attributes: {
                         title: "attributeHierarchy",
                         description: "attributeHierarchy",

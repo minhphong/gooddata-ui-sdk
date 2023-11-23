@@ -19,7 +19,7 @@ const DEPARTMENT_ID = "1090";
 const PRODUCT_ID = "1057";
 const DEPARTMENT_ID_PANTHER = "f_owner.department_id";
 const PRODUCT_ID_PANTHER = "attr.f_product.product";
-const DRILL_ID_PANTHER = "drill panther";
+const DRILL_ID_PANTHER = "drillpanther";
 const YEAR_CLOSE = "521";
 const DISPLAYFORM_PRODUCT = "1056";
 
@@ -89,7 +89,7 @@ const heatmapInsights = [
 describe("Drilling", () => {
     beforeEach(() => {
         if (getBackend() !== "BEAR") {
-            api.postDrillDownHierarchy(DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+            api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
         } else {
            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
         }
@@ -98,7 +98,7 @@ describe("Drilling", () => {
     afterEach(() => {
         // Removes drilling from Department attribute
         if (getBackend() !== "BEAR") {
-            //api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
+            api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
         } else {
             api.setUpDrillDownAttribute(DEPARTMENT_ID);
         }
