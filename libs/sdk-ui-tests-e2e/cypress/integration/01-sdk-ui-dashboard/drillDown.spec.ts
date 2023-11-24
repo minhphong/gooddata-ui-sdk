@@ -87,6 +87,22 @@ const heatmapInsights = [
  */
 
 describe("Drilling", () => {
+    beforeEach(() => {
+        if (getBackend() !== "BEAR") {
+            cy.wait(50000);
+        } else {
+           api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
+        }
+    });
+
+    afterEach(() => {
+        // Removes drilling from Department attribute
+        if (getBackend() !== "BEAR") {
+            //api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
+        } else {
+            api.setUpDrillDownAttribute(DEPARTMENT_ID);
+        }
+    });
 
     describe(
         "Basic drill down",
@@ -103,6 +119,7 @@ describe("Drilling", () => {
 
             it("Should drill down on table with one drillable", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
+                api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
                     drillModal.waitForDrillModalViz().hasTitleHeader(insight.title + " › " + DIRECT_SALES);
@@ -494,14 +511,6 @@ describe("Drilling", () => {
                         "Amount",
                         "$8,217,514.98",
                     ]);
-            });
-            afterEach(() => {
-                // Removes drilling from Department attribute
-                if (getBackend() !== "BEAR") {
-                    //api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
-                } else {
-                    api.setUpDrillDownAttribute(DEPARTMENT_ID);
-                }
             });
         },
     );

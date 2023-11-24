@@ -67,37 +67,38 @@ export class Api {
         });
     };
 
-    postDrillDownHierarchy = (drillId:string, drillFromAttribute: string, drillToAttribute: string) => {
-        const  body = {
-                data: {
-                    type: "attributeHierarchy",
-                    id: drillId,
-                    attributes: {
-                        title: "attributeHierarchy",
-                        description: "attributeHierarchy",
-                        tags: ["string"],
-                        areRelationsValid: true,
-                        content: {
-                            attributes: [
-                                {
-                                    identifier: {
-                                        type: "attribute",
-                                        id: drillFromAttribute,
-                                    },
+    postDrillDownHierarchy = (drillId: string, drillFromAttribute: string, drillToAttribute: string) => {
+        const body = {
+            data: {
+                type: "attributeHierarchy",
+                id: drillId,
+                attributes: {
+                    title: "attributeHierarchy",
+                    description: "attributeHierarchy",
+                    tags: ["string"],
+                    areRelationsValid: true,
+                    content: {
+                        attributes: [
+                            {
+                                identifier: {
+                                    type: "attribute",
+                                    id: drillFromAttribute,
                                 },
-                                {
-                                    identifier: {
-                                        type: "attribute",
-                                        id: drillToAttribute,
-                                    },
+                            },
+                            {
+                                identifier: {
+                                    type: "attribute",
+                                    id: drillToAttribute,
                                 },
-                            ],
-                        },
+                            },
+                        ],
                     },
                 },
-            };
+            },
+        };
         const url = `/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`;
-        return Api.request("POST", url, body);
+        return Api.request("POST", url, body).then((response) => {
+            expect(response.status).eq(201)});
     };
 
     deleteDrillDownHierarchy = (drillId: string) => {
