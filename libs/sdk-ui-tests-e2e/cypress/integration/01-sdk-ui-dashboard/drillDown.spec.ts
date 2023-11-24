@@ -110,8 +110,8 @@ describe("Drilling", () => {
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
         () => {
             it("Should drill down on table with one drillable", () => {
-                cy.intercept("POST", "**/attributeHierarchies").as("hierarchy");
                 Navigation.visit("dashboard/dashboard-table-drill-down");
+                cy.intercept("GET", "**features?sdkUrl=default**").as("settings");
                 cy.wait(10000);
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
