@@ -109,6 +109,15 @@ describe("Drilling", () => {
         "Basic drill down",
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
         () => {
+            beforeEach(() => {
+                if (getBackend() !== "BEAR") {
+                    api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+                    cy.wait(50000);
+                } else {
+                    api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
+                }
+            });
+
             it("Should drill down on table with one drillable", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 dashboardTable.forEach((insight, index) => {
