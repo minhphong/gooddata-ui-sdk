@@ -97,7 +97,7 @@ export class Api {
             },
         };
         const url = `/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`;
-        return Api.request("POST", url, body);
+        return Api.request("POST", url, body, { useVendorContentType: false });
     };
 
     deleteDrillDownHierarchy = (drillId: string) => {
