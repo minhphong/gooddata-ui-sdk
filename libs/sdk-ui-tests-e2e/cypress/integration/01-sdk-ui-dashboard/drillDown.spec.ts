@@ -110,7 +110,6 @@ describe("Drilling", () => {
         () => {
             it("Should drill down on table with one drillable", () => {
                 cy.intercept("POST", "**/attributeHierarchies").as("hierarchy");
-                cy.wait('@hierarchy');
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
