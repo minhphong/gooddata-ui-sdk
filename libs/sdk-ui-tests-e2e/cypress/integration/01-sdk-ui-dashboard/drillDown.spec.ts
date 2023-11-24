@@ -112,6 +112,7 @@ describe("Drilling", () => {
             it("Should drill down on table with one drillable", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 cy.intercept("GET", "**features?sdkUrl=default**").as("settings");
+                cy.intercept("GET", "/afm/execute").as("settings2");
                 cy.wait(10000);
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
