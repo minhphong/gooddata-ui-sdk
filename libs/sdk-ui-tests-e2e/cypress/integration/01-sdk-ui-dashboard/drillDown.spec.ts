@@ -109,9 +109,9 @@ describe("Drilling", () => {
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
         () => {
             it("Should drill down on table with one drillable", () => {
-                cy.intercept(`/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`).as('matchedUrl')
+                cy.intercept("POST", "**/attributeHierarchies").as("hierarchy");
+                cy.wait('@hierarchy');
                 Navigation.visit("dashboard/dashboard-table-drill-down");
-                api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
                     drillModal.waitForDrillModalViz().hasTitleHeader(insight.title + " › " + DIRECT_SALES);
