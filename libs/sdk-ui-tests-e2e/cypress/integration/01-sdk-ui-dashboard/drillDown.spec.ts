@@ -88,15 +88,6 @@ const heatmapInsights = [
 
 describe("Drilling", () => {
 
-    afterEach(() => {
-        // Removes drilling from Department attribute
-        if (getBackend() !== "BEAR") {
-            //api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
-        } else {
-            api.setUpDrillDownAttribute(DEPARTMENT_ID);
-        }
-    });
-
     describe(
         "Basic drill down",
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
@@ -503,6 +494,14 @@ describe("Drilling", () => {
                         "Amount",
                         "$8,217,514.98",
                     ]);
+            });
+            afterEach(() => {
+                // Removes drilling from Department attribute
+                if (getBackend() !== "BEAR") {
+                    //api.deleteDrillDownHierarchy(DRILL_ID_PANTHER);
+                } else {
+                    api.setUpDrillDownAttribute(DEPARTMENT_ID);
+                }
             });
         },
     );
