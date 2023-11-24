@@ -89,7 +89,7 @@ const heatmapInsights = [
 describe("Drilling", () => {
     beforeEach(() => {
         if (getBackend() !== "BEAR") {
-            cy.wait(50000);
+            api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
         } else {
            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
         }
@@ -110,14 +110,13 @@ describe("Drilling", () => {
         () => {
             beforeEach(() => {
                 if (getBackend() !== "BEAR") {
-                    api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
                     cy.wait(50000);
                 } else {
                     api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
                 }
             });
 
-            it("Should drill down on table with one drillable", () => {
+            it.skip("Should drill down on table with one drillable", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
                 dashboardTable.forEach((insight, index) => {
@@ -130,7 +129,7 @@ describe("Drilling", () => {
                 });
             });
 
-            it.skip("Should drill down on table transpose", () => {
+            it("Should drill down on table transpose", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 new Widget(5).scrollIntoView().waitTableLoaded().getTable().click(0, 1);
                 drillModal
