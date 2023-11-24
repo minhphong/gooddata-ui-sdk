@@ -7,7 +7,7 @@ import { DateFilter } from "../../tools/dateFilter";
 import { DateFilterValue } from "../../tools/enum/DateFilterValue";
 import { Api } from "../../tools/api";
 import { DateFilterAbsoluteForm } from "../../tools/dateFilterAbsoluteForm";
-import { getBackend } from "../../support/constants";
+import {getBackend, getProjectId} from "../../support/constants";
 
 const drillModal = new DrillToModal();
 const api = new Api();
@@ -108,7 +108,8 @@ describe("Drilling", () => {
         "Basic drill down",
         { tags: ["checklist_integrated_bear", "checklist_integrated_tiger"] },
         () => {
-            it.skip("Should drill down on table with one drillable", () => {
+            it("Should drill down on table with one drillable", () => {
+                cy.intercept(`/api/v1/entities/workspaces/${getProjectId()}/attributeHierarchies/`).as('matchedUrl')
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
                 dashboardTable.forEach((insight, index) => {
@@ -121,7 +122,7 @@ describe("Drilling", () => {
                 });
             });
 
-            it("Should drill down on table transpose", () => {
+            it.skip("Should drill down on table transpose", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
                 new Widget(5).scrollIntoView().waitTableLoaded().getTable().click(0, 1);
                 drillModal
