@@ -7,7 +7,7 @@ import { DateFilter } from "../../tools/dateFilter";
 import { DateFilterValue } from "../../tools/enum/DateFilterValue";
 import { Api } from "../../tools/api";
 import { DateFilterAbsoluteForm } from "../../tools/dateFilterAbsoluteForm";
-import {getBackend, getProjectId} from "../../support/constants";
+import {getBackend} from "../../support/constants";
 
 const drillModal = new DrillToModal();
 const api = new Api();
