@@ -90,6 +90,7 @@ describe("Drilling", () => {
     beforeEach(() => {
         if (getBackend() !== "BEAR") {
             api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
+            cy.wait(5000);
         } else {
            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
         }
