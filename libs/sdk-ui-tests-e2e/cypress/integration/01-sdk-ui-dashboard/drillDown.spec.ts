@@ -8,10 +8,6 @@ import { DateFilterValue } from "../../tools/enum/DateFilterValue";
 import { Api } from "../../tools/api";
 import { DateFilterAbsoluteForm } from "../../tools/dateFilterAbsoluteForm";
 import {getBackend} from "../../support/constants";
-import {EditMode} from "../../tools/editMode";
-import {WidgetConfiguration} from "../../tools/widgetConfiguration";
-import {ISettings} from "@gooddata/sdk-model";
-
 const drillModal = new DrillToModal();
 const api = new Api();
 const firstWidget = new Widget(0);
@@ -25,10 +21,6 @@ const PRODUCT_ID_PANTHER = "attr.f_product.product";
 const DRILL_ID_PANTHER = "drillpanther";
 const YEAR_CLOSE = "521";
 const DISPLAYFORM_PRODUCT = "1056";
-
-const featureFlags: ISettings = {
-    enableAttributeHierarchies: true
-};
 
 const dashboardTable = [
     {
@@ -97,10 +89,6 @@ describe("Drilling", () => {
     beforeEach(() => {
         if (getBackend() !== "BEAR") {
             api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
-            Navigation.visit("dashboard/dashboard-table-drill-down", featureFlags);
-            new EditMode().edit().isInEditMode(true);
-            new Widget(0).waitChartLoaded().focus();
-            new WidgetConfiguration(0).openInteractions().hasInteractionItems(true);
         } else {
            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
         }
