@@ -93,6 +93,7 @@ describe("Drilling", () => {
         if (getBackend() !== "BEAR") {
             api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
             Navigation.visit("dashboard/dashboard-table-drill-down");
+            cy.reload();
             new EditMode().edit().isInEditMode(true);
             new Widget(0).waitChartLoaded().focus();
             new WidgetConfiguration(0).openInteractions().hasInteractionItems(true);
