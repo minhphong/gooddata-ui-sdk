@@ -9,6 +9,7 @@ import { Api } from "../../tools/api";
 import { DateFilterAbsoluteForm } from "../../tools/dateFilterAbsoluteForm";
 import {getBackend} from "../../support/constants";
 import {EditMode} from "../../tools/editMode";
+import {WidgetConfiguration} from "../../tools/widgetConfiguration";
 
 const drillModal = new DrillToModal();
 const api = new Api();
@@ -91,7 +92,10 @@ describe("Drilling", () => {
     beforeEach(() => {
         if (getBackend() !== "BEAR") {
             api.postDrillDownHierarchy(DRILL_ID_PANTHER, DEPARTMENT_ID_PANTHER, PRODUCT_ID_PANTHER);
-            cy.wait(5000);
+            Navigation.visit("dashboard/dashboard-table-drill-down");
+            new EditMode().edit().isInEditMode(true);
+            new Widget(0).waitChartLoaded().focus();
+            new WidgetConfiguration(0).openInteractions().hasInteractionItems(true);
         } else {
            api.setUpDrillDownAttribute(DEPARTMENT_ID, PRODUCT_ID);
         }
@@ -112,8 +116,6 @@ describe("Drilling", () => {
         () => {
             it("Should drill down on table with one drillable", () => {
                 Navigation.visit("dashboard/dashboard-table-drill-down");
-                new EditMode().edit().isInEditMode(true);
-                new EditMode().cancel();
                 cy.wait(10000);
                 dashboardTable.forEach((insight, index) => {
                     new Widget(index).waitTableLoaded().getTable().click(0, 0);
