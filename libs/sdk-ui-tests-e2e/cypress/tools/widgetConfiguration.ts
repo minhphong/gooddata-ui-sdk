@@ -10,7 +10,6 @@ import {
     isDashboardName,
     getInsightSelectorFromInsightTitle,
 } from "./insightsCatalog";
-import {equal} from "assert";
 
 export type InteractionType = "measure" | "attribute";
 export class WidgetConfiguration {
@@ -52,7 +51,7 @@ export class WidgetConfiguration {
         return this;
     }
 
-    countInteractionItems(count) {
+    countInteractionItems(count = 1) {
         this.getElement()
             .find(".s-drill-config-item")
             .should('have.length', count)
