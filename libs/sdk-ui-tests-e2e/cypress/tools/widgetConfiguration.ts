@@ -51,13 +51,6 @@ export class WidgetConfiguration {
         return this;
     }
 
-    countInteractionItems(count = 1) {
-        this.getElement()
-            .find(".s-drill-config-item")
-            .should('have.length', count)
-        return this;
-    }
-
     openInteractions() {
         this.getElement().contains("Interactions").click();
         this.getElement().find(".s-drill-config-panel").should("be.visible");
