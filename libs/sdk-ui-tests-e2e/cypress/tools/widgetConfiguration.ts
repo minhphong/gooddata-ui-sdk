@@ -10,6 +10,7 @@ import {
     isDashboardName,
     getInsightSelectorFromInsightTitle,
 } from "./insightsCatalog";
+import {equal} from "assert";
 
 export type InteractionType = "measure" | "attribute";
 export class WidgetConfiguration {
@@ -51,6 +52,13 @@ export class WidgetConfiguration {
         return this;
     }
 
+    countInteractionItems(count) {
+        this.getElement()
+            .find(".s-drill-config-item")
+            .should('have.length', count)
+        return this;
+    }
+
     openInteractions() {
         this.getElement().contains("Interactions").click();
         this.getElement().find(".s-drill-config-panel").should("be.visible");
@@ -66,7 +74,7 @@ export class WidgetConfiguration {
         const itemSelector = `.s-drill-${itemType}-selector-item`;
 
         this.getElement().find(".s-drill-config-panel .s-add_interaction").click();
-        cy.get(`.s-drill-item-selector-dropdown ${itemSelector}`).contains(itemName).click();
+        cy.get(`.s-drill-item-selector-dropdown ${itemSelector}`).contains(itemName).scrollIntoView().click();
         return this;
     }
 

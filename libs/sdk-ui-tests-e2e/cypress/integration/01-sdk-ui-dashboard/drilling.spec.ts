@@ -23,7 +23,8 @@ describe("Interaction", () => {
         widgetConfig.openInteractions().getDrillConfigItem("Sum of Velocity").remove();
         editMode.save(true).edit();
         widget.waitChartLoaded().focus();
-        widgetConfig.openInteractions().hasInteractionItems(false);
+        // has only date attribute drill default
+        widgetConfig.openInteractions().countInteractionItems(1);
     });
 
     //Cover ticket: RAIL-4717
