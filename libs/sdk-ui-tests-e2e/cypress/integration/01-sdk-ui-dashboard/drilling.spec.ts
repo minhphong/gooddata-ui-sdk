@@ -21,6 +21,7 @@ describe("Interaction", () => {
         editMode.edit();
         widget.waitChartLoaded().focus();
         widgetConfig.openInteractions().getDrillConfigItem("Sum of Velocity").remove();
+        widgetConfig.openInteractions().getDrillConfigItem("Created - Year").remove();
         editMode.save(true).edit();
         widget.waitChartLoaded().focus();
         widgetConfig.openInteractions().hasInteractionItems(false);
