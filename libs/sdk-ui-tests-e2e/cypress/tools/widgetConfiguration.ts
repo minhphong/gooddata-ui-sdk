@@ -231,7 +231,7 @@ class DrillConfigItem {
     }
 
     chooseAction(drillType: DrillType) {
-        this.getElement().find(".s-drill-config-panel-target-button").click();
+        this.getElement().find(".s-drill-config-panel-target-button").scrollIntoView().click();
         cy.get(".s-drill-config-panel-target-type-open").contains(drillType).click();
         return this;
     }
