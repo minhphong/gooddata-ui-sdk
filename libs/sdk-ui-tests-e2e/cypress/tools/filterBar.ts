@@ -468,6 +468,22 @@ export class AttributeFilter {
         return this;
     }
 
+    configureLimitingDateFilterDependency(parentFilterName: string, dateType: string) {
+        this.selectConfiguration();
+
+        cy.get(".s-add").click();
+        cy.get(".s-add-limit-dashboard_filter").click();
+
+        if (dateType == "Date range") {
+            cy.get(getTestClassByTitle(dateType, "dashboard-filter-")).click();
+            cy.get(".date-filter__limit__popup__item.s-" + parentFilterName).click();
+        } else {
+            cy.get(".s-dashboard-filter-date__" + parentFilterName + "_").click();
+        }
+
+        this.getDropdownElement().find(".s-apply").click();
+        return this;
+    }
     /**
      * Works only for Tiger backend (available filter values UI)
      *

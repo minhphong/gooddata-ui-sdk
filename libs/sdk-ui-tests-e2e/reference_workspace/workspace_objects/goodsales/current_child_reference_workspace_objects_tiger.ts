@@ -1,7 +1,7 @@
 // (C) 2024 GoodData Corporation
 
 /* eslint-disable */
-/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2024-01-23T09:23:15.872Z; */
+/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2024-03-18T07:17:00.930Z; */
 // @ts-ignore ignore unused imports here if they happen (e.g. when there is no measure in the workspace)
 import {
     newAttribute,
@@ -18,14 +18,14 @@ import {
  */
 export const Account = {
     /**
-     * Display Form Title: Name
-     * Display Form ID: label.f_account.account.name
-     */
-    Name: newAttribute("label.f_account.account.name"),
-    /**
      * Display Form Title: Account
      * Display Form ID: attr.f_account.account
-     */ Default: newAttribute("attr.f_account.account"),
+     */
+    Default: newAttribute("attr.f_account.account"),
+    /**
+     * Display Form Title: Name
+     * Display Form ID: label.f_account.account.name
+     */ Name: newAttribute("label.f_account.account.name"),
 };
 /**
  * Attribute Title: Activity
@@ -48,14 +48,14 @@ export const Activity = {
  */
 export const Opportunity = {
     /**
-     * Display Form Title: Opportunity
-     * Display Form ID: attr.f_opportunity.opportunity
-     */
-    Default: newAttribute("attr.f_opportunity.opportunity"),
-    /**
      * Display Form Title: Opportunity Name
      * Display Form ID: label.f_opportunity.opportunity.name
-     */ Name: newAttribute("label.f_opportunity.opportunity.name"),
+     */
+    Name: newAttribute("label.f_opportunity.opportunity.name"),
+    /**
+     * Display Form Title: Opportunity
+     * Display Form ID: attr.f_opportunity.opportunity
+     */ Default: newAttribute("attr.f_opportunity.opportunity"),
     /**
      * Display Form Title: SFDC URL
      * Display Form ID: label.f_opportunity.opportunity.sfdcurl
@@ -87,14 +87,14 @@ export const SalesRep = {
  */
 export const Product = {
     /**
-     * Display Form Title: Product
-     * Display Form ID: attr.f_product.product
-     */
-    Default: newAttribute("attr.f_product.product"),
-    /**
      * Display Form Title: Product Name
      * Display Form ID: label.f_product.product.name
-     */ Name: newAttribute("label.f_product.product.name"),
+     */
+    Name: newAttribute("label.f_product.product.name"),
+    /**
+     * Display Form Title: Product
+     * Display Form ID: attr.f_product.product
+     */ Default: newAttribute("attr.f_product.product"),
 };
 /**
  * Attribute Title: Stage History
@@ -108,13 +108,13 @@ export const StageHistory: IAttribute = newAttribute("attr.f_stagehistory.stageh
 export const StageName = {
     /**
      * Display Form Title: Stage Name
-     * Display Form ID: attr.f_stage.stagename
+     * Display Form ID: label.f_stage.stagename.stagename
      */
-    Default: newAttribute("attr.f_stage.stagename"),
+    Default: newAttribute("label.f_stage.stagename.stagename"),
     /**
      * Display Form Title: Stage Name
-     * Display Form ID: label.f_stage.stagename.stagename
-     */ _1: newAttribute("label.f_stage.stagename.stagename"),
+     * Display Form ID: attr.f_stage.stagename
+     */ _1: newAttribute("attr.f_stage.stagename"),
     /**
      * Display Form Title: Order
      * Display Form ID: label.f_stage.stagename.order
@@ -166,34 +166,34 @@ export const Status: IAttribute = newAttribute("f_activity.status_id");
  */
 export const City = {
     /**
-     * Display Form Title: City ascii name
-     * Display Form ID: f_city.id.cityasciiname
+     * Display Form Title: Location
+     * Display Form ID: f_city.id.location
      */
-    AsciiName: newAttribute("f_city.id.cityasciiname"),
-    /**
-     * Display Form Title: City
-     * Display Form ID: f_city.id
-     */ Default: newAttribute("f_city.id"),
-    /**
-     * Display Form Title: Latitude
-     * Display Form ID: f_city.id.latitude
-     */ Latitude: newAttribute("f_city.id.latitude"),
+    Location: newAttribute("f_city.id.location"),
     /**
      * Display Form Title: Longitude
      * Display Form ID: f_city.id.longitude
      */ Longitude: newAttribute("f_city.id.longitude"),
     /**
-     * Display Form Title: City name
-     * Display Form ID: f_city.id.cityname
-     */ Name: newAttribute("f_city.id.cityname"),
-    /**
      * Display Form Title: City short name
      * Display Form ID: f_city.id.cityshortname
      */ ShortName: newAttribute("f_city.id.cityshortname"),
     /**
-     * Display Form Title: Location
-     * Display Form ID: f_city.id.location
-     */ Location: newAttribute("f_city.id.location"),
+     * Display Form Title: City
+     * Display Form ID: f_city.id
+     */ Default: newAttribute("f_city.id"),
+    /**
+     * Display Form Title: City name
+     * Display Form ID: f_city.id.cityname
+     */ Name: newAttribute("f_city.id.cityname"),
+    /**
+     * Display Form Title: City ascii name
+     * Display Form ID: f_city.id.cityasciiname
+     */ AsciiName: newAttribute("f_city.id.cityasciiname"),
+    /**
+     * Display Form Title: Latitude
+     * Display Form ID: f_city.id.latitude
+     */ Latitude: newAttribute("f_city.id.latitude"),
 };
 /**
  * Attribute Title: Opportunity Id
@@ -2667,6 +2667,10 @@ export const Dashboards = {
      */
     DrillToInsight: "04a8f9c7-cce9-4511-be2b-ea52ea80773f",
     /**
+     * Dashboard Title: Dashboard multiple date filters
+     * Dashboard ID: 0c120022-243d-4146-987c-eadfaa58b0d0
+     */ DashboardMultipleDateFilters: "0c120022-243d-4146-987c-eadfaa58b0d0",
+    /**
      * Dashboard Title: Dashboard column chart has not hyperlink
      * Dashboard ID: 0de1f35f-994d-4803-b236-ae2549818104
      */ DashboardColumnChartHasNotHyperlink: "0de1f35f-994d-4803-b236-ae2549818104",
@@ -2738,6 +2742,10 @@ export const Dashboards = {
      * Dashboard Title: KD using long name metric
      * Dashboard ID: 7b2cd4c1-bb41-473a-9017-e404cbc630d2
      */ KDUsingLongNameMetric: "7b2cd4c1-bb41-473a-9017-e404cbc630d2",
+    /**
+     * Dashboard Title: RichText
+     * Dashboard ID: 8dea7e2f-315d-4d62-ad51-2ed2ab29758b
+     */ RichText: "8dea7e2f-315d-4d62-ad51-2ed2ab29758b",
     /**
      * Dashboard Title: Drill to dashboard
      * Dashboard ID: 97aca5e1-ab29-4ad9-a173-72085daf4dbf
