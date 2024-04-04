@@ -20,7 +20,7 @@ const featureFlags: ISettings = {
     enableKDAttributeFilterDatesValidation: true,
 };
 describe("Available value filter", () => {
-    it.skip("should add metric filter by", { tags: "checklist_integrated_tiger" }, () => {
+    it("should add metric filter by", { tags: "checklist_integrated_tiger" }, () => {
         Navigation.visit("dashboard/dashboard-tiger-hide-filters");
         cy.intercept("GET", "**/attributes**").as("attributes");
         topBar.enterEditMode().editButtonIsVisible(false);
@@ -103,52 +103,26 @@ describe("Available value filter", () => {
             .elementsAreLoaded()
             .hasFilterListSize(22)
             .selectConfiguration()
-            .configureLimitingDateFilterDependency("activitive", "Date range")
-            .hasFilterListSize(7)
-            .hasSelectedValueList([
-                "Connecticut",
-                "Massachusetts",
-                "New Hampshire",
-                "New York",
-                "Oregon",
-                "Pennsylvania",
-                "Rhode Island",
-            ]);
+            .configureLimitingDateFilterDependency("activity", "Date range")
+            .hasFilterListSize(20);
 
         salesRepFilter
-            .isLoaded()
-            .open()
-            .configureLimitingDateFilterDependency("activitive", "Date specific")
-            .hasFilterListSize(7)
-            .hasSelectedValueList([
-                "Connecticut",
-                "Massachusetts",
-                "New Hampshire",
-                "New York",
-                "Oregon",
-                "Pennsylvania",
-                "Rhode Island",
-            ]);
+            .elementsAreLoaded()
+            .selectConfiguration()
+            .isSpecificDateFilterVisible("activity", false)
+            .closeConfiguration()
+            .deleteFiltervaluesBy("Date range as Activity")
+            .selectConfiguration()
+            .configureLimitingDateFilterDependency("activity", "Date specific")
+            .hasFilterListSize(20)
+            .selectConfiguration()
+            .isCommonDateFilterVisible("activity", false)
+            .closeConfiguration()
+            .selectAttribute(["Cory Owens"])
+            .apply();
 
-        widget
-            .waitChartLoaded()
-            .getChart()
-            .getDataLabelValues()
-            .should("deep.equal", ["$4,108,360.80", "$2,267,528.48", "$3,461,373.87"]);
+        widget.waitChartLoaded().getChart().getDataLabelValues().should("deep.equal", ["$2,376,100.41"]);
 
-        salesRepFilter
-            .isLoaded()
-            .open()
-            .configureLimitingDateFilterDependency("activitive", "Date specific")
-            .hasFilterListSize(7)
-            .hasSelectedValueList([
-                "Connecticut",
-                "Massachusetts",
-                "New Hampshire",
-                "New York",
-                "Oregon",
-                "Pennsylvania",
-                "Rhode Island",
-            ]);
+        salesRepFilter.open().elementsAreLoaded().deleteFiltervaluesBy("Activity").hasFilterListSize(22);
     });
 });

@@ -468,15 +468,48 @@ export class AttributeFilter {
         return this;
     }
 
-    configureLimitingDateFilterDependency(parentFilterName: string, dateType: string) {
+    openAddLimitDashboardFilter() {
         cy.get(".s-add").click();
         cy.get(".s-add-limit-dashboard_filter").click();
+    }
+
+    closeAddLimitDashboardFilter() {
+        cy.get(".configuration-panel-header-title.clickable").click();
+        return this;
+    }
+    isSpecificDateFilterVisible(parentFilterName: string, visible = true): this {
+        this.openAddLimitDashboardFilter();
+        cy.get(".s-dashboard-filter-" + parentFilterName).should(($element) => {
+            if (visible) {
+                expect($element).to.have.class("is-disable");
+            } else {
+                expect($element).not.to.have.class("is-disable");
+            }
+        });
+        this.closeAddLimitDashboardFilter();
+        return this;
+    }
+    isCommonDateFilterVisible(parentFilterName: string, visible = true): this {
+        this.openAddLimitDashboardFilter();
+        cy.get(getTestClassByTitle("Date range", "dashboard-filter-")).click();
+        cy.get(".date-filter__limit__popup__item.s-" + parentFilterName).should(($element) => {
+            if (visible) {
+                expect($element).to.have.class("is-disable");
+            } else {
+                expect($element).not.to.have.class("is-disable");
+            }
+        });
+        this.closeAddLimitDashboardFilter();
+        return this;
+    }
+    configureLimitingDateFilterDependency(parentFilterName: string, dateType: string) {
+        this.openAddLimitDashboardFilter();
 
         if (dateType == "Date range") {
             cy.get(getTestClassByTitle(dateType, "dashboard-filter-")).click();
             cy.get(".date-filter__limit__popup__item.s-" + parentFilterName).click();
         } else {
-            cy.get(".s-dashboard-filter-date__" + parentFilterName + "_").click();
+            cy.get(".s-dashboard-filter-" + parentFilterName).click();
         }
 
         this.getDropdownElement().find(".s-apply").click();
