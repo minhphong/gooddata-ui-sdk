@@ -3,20 +3,25 @@ import * as Navigation from "../../tools/navigation";
 import { Headline } from "../../tools/headline";
 import { FilterBar, TopBar } from "../../tools/dashboards";
 import { AttributeFilter } from "../../tools/filterBar";
-import { Api } from "../../tools/api";
-import { getProjectId } from "../../support/constants";
+import { DateFilter } from "../../tools/dateFilter";
+import { DateFilterAbsoluteForm } from "../../tools/dateFilterAbsoluteForm";
+import { Widget } from "../../tools/widget";
+import { ISettings } from "@gooddata/sdk-model";
 
 const headline = new Headline(".s-dash-item.viz-type-headline");
 const topBar = new TopBar();
+const widget = new Widget(0);
 const cityFilter = new AttributeFilter("City");
+const salesRepFilter = new AttributeFilter("Sales Rep");
 const accountFilter = new AttributeFilter("Account");
-describe("Available value filter", () => {
-    beforeEach(() => {
-        Navigation.visit("dashboard/dashboard-tiger-hide-filters");
-        Api.setEarlyAccess(getProjectId());
-    });
 
+const featureFlags: ISettings = {
+    enableAttributeFilterValuesValidation: true,
+    enableKDAttributeFilterDatesValidation: true,
+};
+describe("Available value filter", () => {
     it.skip("should add metric filter by", { tags: "checklist_integrated_tiger" }, () => {
+        Navigation.visit("dashboard/dashboard-tiger-hide-filters");
         cy.intercept("GET", "**/attributes**").as("attributes");
         topBar.enterEditMode().editButtonIsVisible(false);
         new FilterBar().clickDateFilter().selectDateFilterOption(".s-all-time").clickApply();
@@ -64,21 +69,39 @@ describe("Available value filter", () => {
             .hasFilterListSize(1);
     });
 
-    it("should extend attribute filter by date filter", { tags: "pre-merge_isolated_tiger" }, () => {
+    it("should extend attribute filter by date filter", { tags: "checklist_integrated_tiger" }, () => {
+        Navigation.visit("dashboard/multiple-date-filters", featureFlags);
         cy.intercept("GET", "**/attributes**").as("attributes");
-        topBar.enterEditMode().editButtonIsVisible(false);
-        new FilterBar().clickDateFilter().selectDateFilterOption(".s-all-time").clickApply();
+
         cy.wait("@attributes").then(() => {
-            accountFilter.open().selectAttribute(["101 Financial"]).apply();
+            const dateFilter = new DateFilter();
+            const dateFilterActivity = new DateFilter("Activity");
+            const dateFilterAbsoluteForm = new DateFilterAbsoluteForm();
+            topBar.enterEditMode().editButtonIsVisible(false);
+
+            dateFilter.openAndSelectOption(".s-absolute-form");
+            dateFilterAbsoluteForm
+                .typeIntoFromRangePickerInput("4/3/2010")
+                .typeIntoToRangePickerInput("4/3/2018");
+            dateFilter.pressButton("apply");
+
+            dateFilterActivity.openAndSelectOption(".s-absolute-form");
+            dateFilterAbsoluteForm
+                .typeIntoFromRangePickerInput("4/3/2010")
+                .typeIntoToRangePickerInput("4/3/2018");
+            dateFilterActivity.pressButton("apply");
         });
 
-        headline.waitLoaded().hasValue("7,200");
+        widget
+            .waitChartLoaded()
+            .getChart()
+            .getDataLabelValues()
+            .should("deep.equal", ["$4,108,360.80", "$2,267,528.48", "$3,461,373.87"]);
 
-        cityFilter
-            .isLoaded()
+        salesRepFilter
             .open()
-            .hasSubtitle("All")
-            .hasFilterListSize(48)
+            .elementsAreLoaded()
+            .hasFilterListSize(22)
             .selectConfiguration()
             .configureLimitingDateFilterDependency("activitive", "Date range")
             .hasFilterListSize(7)
@@ -92,13 +115,9 @@ describe("Available value filter", () => {
                 "Rhode Island",
             ]);
 
-        headline.waitLoaded().hasValue("7,200");
-
-        cityFilter
+        salesRepFilter
             .isLoaded()
             .open()
-            .hasSubtitle("All")
-            .hasFilterListSize(48)
             .configureLimitingDateFilterDependency("activitive", "Date specific")
             .hasFilterListSize(7)
             .hasSelectedValueList([
@@ -111,6 +130,25 @@ describe("Available value filter", () => {
                 "Rhode Island",
             ]);
 
-        headline.waitLoaded().hasValue("7,200");
+        widget
+            .waitChartLoaded()
+            .getChart()
+            .getDataLabelValues()
+            .should("deep.equal", ["$4,108,360.80", "$2,267,528.48", "$3,461,373.87"]);
+
+        salesRepFilter
+            .isLoaded()
+            .open()
+            .configureLimitingDateFilterDependency("activitive", "Date specific")
+            .hasFilterListSize(7)
+            .hasSelectedValueList([
+                "Connecticut",
+                "Massachusetts",
+                "New Hampshire",
+                "New York",
+                "Oregon",
+                "Pennsylvania",
+                "Rhode Island",
+            ]);
     });
 });

@@ -469,8 +469,6 @@ export class AttributeFilter {
     }
 
     configureLimitingDateFilterDependency(parentFilterName: string, dateType: string) {
-        this.selectConfiguration();
-
         cy.get(".s-add").click();
         cy.get(".s-add-limit-dashboard_filter").click();
 
@@ -484,6 +482,7 @@ export class AttributeFilter {
         this.getDropdownElement().find(".s-apply").click();
         return this;
     }
+
     /**
      * Works only for Tiger backend (available filter values UI)
      *
